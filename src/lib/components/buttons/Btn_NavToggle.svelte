@@ -4,7 +4,9 @@
 
 <button
 	aria-label="Toggle Navigation"
-	class="bg-brand-light dark:bg-brand-teal-dark shadow-brand-dark/20 dark:shadow-brand-dark h-8 w-8 cursor-pointer rounded-md shadow-inner md:hidden"
+	class="bg-brand-light {state.mobileNavToggle
+		? 'dark:bg-brand-teal-med'
+		: 'dark:bg-brand-teal-dark'} shadow-brand-dark/20 dark:shadow-brand-dark h-8 w-8 cursor-pointer rounded-md shadow-inner md:hidden"
 	onclick={() => {
 		state.mobileNavToggle = !state.mobileNavToggle;
 	}}

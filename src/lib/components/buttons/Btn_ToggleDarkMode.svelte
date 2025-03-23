@@ -14,7 +14,9 @@
 
 <Switch.Root
 	bind:checked={state.darkMode}
-	class="dark:bg-brand-teal-dark bg-brand-light shadow-brand-dark/20 dark:shadow-brand-dark h-8 w-13 cursor-pointer overflow-hidden rounded-full shadow-inner transition-colors"
+	class="{state.mobileNavToggle
+		? 'dark:bg-brand-teal-med'
+		: 'dark:bg-brand-teal-dark'} bg-brand-light shadow-brand-dark/20 dark:shadow-brand-dark h-8 w-13 cursor-pointer overflow-hidden rounded-full shadow-inner transition-colors"
 >
 	<Switch.Thumb
 		class="dark:bg-brand-dark bg-brand-light dark:shadow-brand-teal-dark mx-1 flex h-6 w-6 items-center justify-center rounded-full shadow-md transition-all dark:translate-x-5"

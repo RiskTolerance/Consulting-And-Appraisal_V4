@@ -8,9 +8,12 @@
 	import MobileNavToggle from '$lib/components/buttons/Btn_NavToggle.svelte';
 
 	function getNavLinkClass(path: string) {
+		if (page.url.pathname === '/') {
+			return 'dark:text-brand-light hover:text-brand-light dark:hover:text-brand-teal-light';
+		}
 		return page.url.pathname === path
-			? 'text-brand-orange dark:text-brand-dark'
-			: 'dark:text-brand-light';
+			? 'text-brand-orange dark:text-brand-dark hover:text-brand-orange dark:hover:text-brand-dark'
+			: 'dark:text-brand-light hover:text-brand-orange dark:hover:text-brand-dark';
 	}
 </script>
 
@@ -30,7 +33,7 @@
 				class="dark:text-brand-light text-md hidden items-center gap-6 font-bold md:flex lg:text-lg"
 			>
 				{#each config.navLinks as { href, label }}
-					<li class="hover:text-brand-orange dark:hover:text-brand-dark {getNavLinkClass(href)}">
+					<li class=" {getNavLinkClass(href)}">
 						<a {href}>{label}</a>
 					</li>
 				{/each}

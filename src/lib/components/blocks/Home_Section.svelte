@@ -4,9 +4,7 @@
 
 <div class="w-full px-8">
 	<div class="relative container mx-auto grid grid-cols-2 gap-8">
-		<div class="bg-brand-teal-light absolute left-1/2 h-3/4 w-10 -translate-x-1/2">
-			<p>divider</p>
-		</div>
+		<div class="bg-brand-teal-light absolute left-1/2 h-3/4 w-10 -translate-x-1/2"></div>
 		<div class="prose">
 			<h2>{title}</h2>
 			<p>{body}</p>

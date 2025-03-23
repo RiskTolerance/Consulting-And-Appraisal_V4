@@ -17,9 +17,9 @@
 	{#if custom}
 		{@render custom()}
 	{:else}
-		<div class="prose-sm md:prose">
-			<h1 class="text-brand-dark dark:text-brand-light text-4xl font-bold">{title}</h1>
-			<p class="text-brand-dark dark:text-brand-light font-bold">
+		<div>
+			<h1 class="text-4xl font-bold">{title}</h1>
+			<p class="font-bold">
 				{body}
 			</p>
 		</div>

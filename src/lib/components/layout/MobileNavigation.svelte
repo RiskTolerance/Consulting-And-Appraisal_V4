@@ -29,7 +29,9 @@
 		>
 			<ul class="flex flex-col gap-4 text-2xl font-bold">
 				{#each config.navLinks as { href, label }}
-					<li class="hover:text-brand-orange dark:hover:text-brand-dark {getNavLinkClass(href)}">
+					<li
+						class="hover:text-brand-orange dark:hover:text-brand-teal-light {getNavLinkClass(href)}"
+					>
 						<a onclick={() => (state.mobileNavToggle = false)} {href}>{label}</a>
 					</li>
 				{/each}
