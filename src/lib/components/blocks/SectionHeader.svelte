@@ -8,14 +8,16 @@
 	}: { title: string; body?: string; custom?: Snippet } = $props();
 </script>
 
-<div class="titlecard relative flex min-h-[35vh] w-full items-center justify-center px-8 pt-28">
+<div
+	class="titlecard relative flex min-h-[45vh] w-full items-center justify-center px-8 pt-28 md:min-h-[35vh]"
+>
 	<div
 		class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark absolute inset-0 -z-20 bg-gradient-to-bl"
 	></div>
 	{#if custom}
 		{@render custom()}
 	{:else}
-		<div class="prose">
+		<div class="prose-sm md:prose">
 			<h1 class="text-brand-dark dark:text-brand-light text-4xl font-bold">{title}</h1>
 			<p class="text-brand-dark dark:text-brand-light font-bold">
 				{body}
@@ -31,6 +33,6 @@
 		background-repeat: repeat;
 		background-size: auto;
 		background-position: top left;
-		background-blend-mode: overlay;
+		background-blend-mode: overlay; /* Optional: makes pattern blend with gradient */
 	}
 </style>

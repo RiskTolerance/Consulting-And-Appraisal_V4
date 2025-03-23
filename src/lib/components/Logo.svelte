@@ -1,5 +1,5 @@
 <svg
-	class="h-full w-fit"
+	class="h-full w-40 md:w-fit"
 	width="422"
 	height="116"
 	viewBox="0 0 422 116"

@@ -3,6 +3,7 @@
 	let { children } = $props();
 	import Navigation from '$lib/components/layout/Navigation.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import MobileNavigation from '$lib/components/layout/MobileNavigation.svelte';
 </script>
 
 <svelte:head>
@@ -14,5 +15,6 @@
 </svelte:head>
 
 <Navigation />
+<MobileNavigation />
 {@render children()}
 <Footer />
