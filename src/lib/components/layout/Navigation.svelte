@@ -6,14 +6,6 @@
 	import DarkModeToggle from '$lib/components/buttons/Btn_ToggleDarkMode.svelte';
 	import MobileNavToggle from '$lib/components/buttons/Btn_NavToggle.svelte';
 
-	$effect(() => {
-		if (state.darkMode) {
-			document.body.classList.add('dark');
-		} else {
-			document.body.classList.remove('dark');
-		}
-	});
-
 	const navLinks = [
 		{ href: '/about', label: 'About' },
 		{ href: '/services', label: 'Services' },

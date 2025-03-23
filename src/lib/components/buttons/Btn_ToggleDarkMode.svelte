@@ -2,6 +2,14 @@
 	import { state } from '$lib/appState.svelte';
 	import { Switch } from 'bits-ui';
 	import { Sun, MoonStar } from '@lucide/svelte';
+
+	$effect(() => {
+		if (state.darkMode) {
+			document.body.classList.add('dark');
+		} else {
+			document.body.classList.remove('dark');
+		}
+	});
 </script>
 
 <Switch.Root
