@@ -14,8 +14,5 @@
 </svelte:head>
 
 <Navigation />
-<div class="dark:bg-brand-dark bg-brand-light min-h-screen">
-	{@render children()}
-</div>
-
+{@render children()}
 <Footer />
