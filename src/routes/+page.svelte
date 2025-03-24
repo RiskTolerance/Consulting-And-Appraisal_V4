@@ -7,4 +7,10 @@
 </script>
 
 <Hero></Hero>
-<HomeSection title="title" body="adsafasdfgafhsdfgsdfg" image={section1Img}></HomeSection>
+<HomeSection
+	title="title"
+	body="adsafasdfgafhsdfgsdfg"
+	image={section1Img}
+	topMarginClass="-top-32"
+	bottomMarginClass="-bottom-10"
+></HomeSection>

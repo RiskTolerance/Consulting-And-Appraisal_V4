@@ -4,5 +4,10 @@ export const config = $state({
 		{ href: '/services', label: 'Services' },
 		{ href: '/ideas', label: 'Ideas' },
 		{ href: '/contact', label: 'Contact' }
-	]
+	],
+	socialLinks: {
+		facebook: '/',
+		linkedin: '/',
+		x: ''
+	}
 });

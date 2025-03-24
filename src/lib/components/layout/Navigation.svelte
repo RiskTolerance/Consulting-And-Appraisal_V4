@@ -3,7 +3,8 @@
 	import { config } from '$lib/appConfig.svelte';
 	import { page } from '$app/state';
 
-	import Logo from '../Logo.svelte';
+	import Logo from '$lib/components/Logo.svelte';
+	import LogoDark from '$lib/components/Logo-Dark.svelte';
 	import DarkModeToggle from '$lib/components/buttons/Btn_ToggleDarkMode.svelte';
 	import MobileNavToggle from '$lib/components/buttons/Btn_NavToggle.svelte';
 
@@ -17,14 +18,18 @@
 	}
 </script>
 
-<div class="absolute z-[1000] h-28 w-full px-8 py-4">
+<div class="absolute z-[1000] w-full px-4 py-8 md:px-8">
 	<nav
 		class=" container mx-auto flex justify-between {state.mobileNavToggle
 			? 'justify-end gap-4'
 			: 'justify-between'}"
 	>
-		<a href="/" class=" h-20 md:block">
-			<Logo></Logo>
+		<a href="/" class="h-20 sm:h-26 md:block lg:h-32">
+			{#if state.darkMode}
+				<LogoDark></LogoDark>
+			{:else}
+				<Logo></Logo>
+			{/if}
 		</a>
 
 		<div class="flex items-center gap-6">
