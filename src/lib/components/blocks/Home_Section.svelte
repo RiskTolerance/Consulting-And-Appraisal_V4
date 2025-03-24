@@ -1,35 +1,52 @@
 <script lang="ts">
-	import Btn_Solid from '$lib/components/buttons/Btn_Outline.svelte';
+	import BtnSolid from '$lib/components/buttons/Btn_Solid.svelte';
 	let {
 		title,
 		body,
+		btnText,
+		btnHref,
 		image,
 		topMarginClass = 'mt-0',
-		bottomMarginClass = 'mb-0'
+		bottomMarginClass = 'mb-0',
+		reverse = false
 	}: {
 		title: string;
 		body: string;
+		btnText: string;
+		btnHref: string;
 		image: any;
 		topMarginClass?: string;
 		bottomMarginClass?: string;
+		reverse: boolean;
 	} = $props();
 </script>
 
-<div class="w-full px-8">
-	<div class="relative container mx-auto my-12 grid grid-cols-2 md:my-16 lg:mb-32 lg:gap-x-12">
+<div class="w-full px-8 md:px-16">
+	<div
+		class="relative container mx-auto my-12 grid grid-cols-1 md:my-16 md:grid-cols-2 lg:mb-32 lg:gap-x-12"
+	>
 		<div
 			class="bg-brand-teal-light absolute left-1/2 -z-10 hidden w-32 -translate-x-1/2 lg:block {topMarginClass} {bottomMarginClass}"
 		></div>
 		<div
-			class="flex w-full flex-col justify-center pt-3 sm:w-1/2 sm:pt-0 sm:pl-12 md:pl-16 lg:pl-20"
+			class="{reverse
+				? 'order-first md:order-last md:pl-16 lg:pl-20'
+				: 'order-first md:pr-16 lg:pr-20'} flex w-full flex-col justify-center gap-8 pt-3 pb-8 sm:pt-0 md:pb-0"
 		>
 			<h1 class="text-4xl">{title}</h1>
 			<p class="text-sm sm:text-base lg:text-lg">
 				{body}
 			</p>
-			<Btn_Solid></Btn_Solid>
+			<div class="ml-auto">
+				<BtnSolid buttonText={btnText} url={btnHref}></BtnSolid>
+			</div>
 		</div>
-		<enhanced:img class="z-10 max-h-96 w-full object-cover lg:w-full" src={image} alt=""
+		<enhanced:img
+			class="{reverse
+				? 'order-first'
+				: 'order-first md:order-last'} z-10 max-h-96 w-full object-cover lg:w-full"
+			src={image}
+			alt=""
 		></enhanced:img>
 	</div>
 </div>
