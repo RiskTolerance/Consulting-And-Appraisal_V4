@@ -17,6 +17,9 @@ importers:
       drizzle-orm:
         specifier: ^0.40.1
         version: 0.40.1(gel@2.0.1)(mysql2@3.14.0)
+      imagetools-core:
+        specifier: ^7.0.2
+        version: 7.0.2
       mysql2:
         specifier: ^3.14.0
         version: 3.14.0

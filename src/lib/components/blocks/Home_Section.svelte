@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Picture } from 'imagetools-core';
 	import BtnSolid from '$lib/components/buttons/Btn_Solid.svelte';
 	let {
 		title,
@@ -14,7 +15,7 @@
 		body: string;
 		btnText: string;
 		btnHref: string;
-		image: any;
+		image: Picture;
 		topMarginClass?: string;
 		bottomMarginClass?: string;
 		reverse: boolean;
