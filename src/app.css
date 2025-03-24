@@ -18,3 +18,9 @@
   --font-header: Ivymode, serif;
   --font-sans: Raleway, Helvetica, Arial, sans-serif;
 }
+
+@layer components {
+	.sectionMarginX {
+		@apply px-12 sm:px-16 md:px-24 lg:px-32 xl:px-64;
+	}
+}

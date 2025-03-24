@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { buttonText, url }: { buttonText?: string; url?: string } = $props();
+	let { buttonText, url }: { buttonText: string; url?: string } = $props();
 	import { Button } from 'bits-ui';
 </script>
 
