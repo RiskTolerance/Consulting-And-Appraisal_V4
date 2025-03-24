@@ -5,6 +5,7 @@
 	import Wade from '$lib/assets/images/wade.jpg?enhanced';
 	import Cooper from '$lib/assets/images/cooper.jpg?enhanced';
 	import Austin from '$lib/assets/images/austin.jpg?enhanced';
+	import BlockHeader from '$lib/components/blocks/BlockHeader.svelte';
 </script>
 
 {#snippet wherewecomefrom()}
@@ -80,13 +81,10 @@
 		title="About"
 		body="C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota."
 	></SectionHeader>
-	<div class="my-10 flex items-center justify-center">
-		<h1 class="text-3xl font-bold">Where We Come From</h1>
-	</div>
+	<BlockHeader title="Where We Come From"></BlockHeader>
+
 	<TextImage text={wherewecomefrom} image={MR} aspectRatio={'landscape'}></TextImage>
-	<div class="my-10 flex items-center justify-center">
-		<h1 class="text-3xl font-bold">Who We Are</h1>
-	</div>
+	<BlockHeader title="Who We Are"></BlockHeader>
 	<TextImage text={wade} image={Wade} aspectRatio={'portrait'}></TextImage>
 	<TextImage text={cooper} image={Cooper} aspectRatio={'portrait'}></TextImage>
 	<TextImage text={austin} image={Austin} aspectRatio={'portrait'}></TextImage>

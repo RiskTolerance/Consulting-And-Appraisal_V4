@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BlockHeader from '$lib/components/blocks/BlockHeader.svelte';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 </script>
 
@@ -16,9 +17,7 @@
 		{/each} -->
 	</div>
 
-	<div class="mb-10 flex items-center justify-center">
-		<h1 class="text-3xl font-bold">Additional Services</h1>
-	</div>
+	<BlockHeader title="Additional Services"></BlockHeader>
 
 	<div class="mb-10 grid w-full gap-x-12 gap-y-6 md:grid-cols-1 lg:grid-cols-2">
 		<!-- {#each secondaryService as service}
