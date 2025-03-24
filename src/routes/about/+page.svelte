@@ -8,8 +8,7 @@
 </script>
 
 {#snippet wherewecomefrom()}
-	<div class="prose-sm text-pretty">
-		<h1>Where We Come From</h1>
+	<div class="text-pretty">
 		<p>
 			With experience in agricultural, commercial, litigation, government projects and real estate
 			studies, our firm is qualified for any job. Since our start, we have continued to grow in
@@ -81,8 +80,13 @@
 		title="About"
 		body="C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota."
 	></SectionHeader>
+	<div class="my-10 flex items-center justify-center">
+		<h1 class="text-3xl font-bold">Where We Come From</h1>
+	</div>
 	<TextImage text={wherewecomefrom} image={MR} aspectRatio={'landscape'}></TextImage>
-
+	<div class="my-10 flex items-center justify-center">
+		<h1 class="text-3xl font-bold">Who We Are</h1>
+	</div>
 	<TextImage text={wade} image={Wade} aspectRatio={'portrait'}></TextImage>
 	<TextImage text={cooper} image={Cooper} aspectRatio={'portrait'}></TextImage>
 	<TextImage text={austin} image={Austin} aspectRatio={'portrait'}></TextImage>
