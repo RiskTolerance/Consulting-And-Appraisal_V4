@@ -7,7 +7,7 @@
 
 <!-- background gradiend -->
 <div
-	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative min-h-[45vh] w-full bg-gradient-to-bl md:min-h-[35vh]"
+	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative -z-10 min-h-[45vh] w-full bg-gradient-to-bl md:min-h-[35vh]"
 >
 	<!-- background pattern -->
 	<div class="titlecard absolute inset-0">
@@ -19,7 +19,10 @@
 			<div class="relative container mx-auto flex h-full flex-col items-center justify-center">
 				<h1 class="text-3xl font-bold md:text-4xl">{title}</h1>
 				<p
-					class="absolute bottom-0 left-1/2 w-full max-w-[600px] -translate-x-1/2 translate-y-[calc(100%+20px)] text-sm md:text-xl"
+					class="absolute bottom-0 left-1/2 w-full max-w-[600px] -translate-x-1/2 translate-y-[calc(100%+20px)] text-sm md:text-xl {body.length >
+					100
+						? 'text-start'
+						: 'text-center'}"
 				>
 					{body}
 				</p>

@@ -1,24 +1,18 @@
 <script lang="ts">
-	import type { Picture } from 'imagetools-core';
-
-	let { title, image, description }: { title: string; image: Picture; description: string } =
-		$props();
+	let { title, img, description }: { title: string; img: string; description: string } = $props();
 </script>
 
 <div class="flex overflow-clip rounded-lg bg-white shadow-lg lg:flex-col">
-	<enhanced:img id="hero-image" class="flex h-full w-full lg:h-52 lg:w-full" src={image} alt=""
-	></enhanced:img>
-	<!-- <div
+	<div
 		id="hero-image"
 		class="flex h-full w-full lg:h-52 lg:w-full"
-		alt="card img"
-		style="background-image: url({img.url});"
-	/> -->
+		style="background-image: url({img});"
+	></div>
 	<div class="flex flex-col">
-		<h2 class="my-4 flex-grow px-6 text-xl text-gray-900 lg:px-8 lg:text-3xl">
+		<h2 class="my-4 flex-grow px-6 text-xl lg:px-8 lg:text-3xl">
 			{title}
 		</h2>
-		<p class="mb-8 px-6 text-sm text-gray-900 lg:px-8 lg:text-base">
+		<p class="mb-8 px-6 text-sm lg:px-8 lg:text-base">
 			{description}
 		</p>
 	</div>
