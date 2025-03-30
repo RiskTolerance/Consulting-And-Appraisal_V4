@@ -4,6 +4,8 @@ export const getPostsQuery: string = `*[_type == 'post']{
     slug,
     "author":author->name,
     "img":mainImage.asset->,
+    "featured": featured,
+    "featuredOrder": featuredOrder,
     "body":body[0].children[0].text,
     "excerpt":excerpt[0].children[0].text
     }`;

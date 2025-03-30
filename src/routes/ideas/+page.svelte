@@ -1,5 +1,8 @@
 <script lang="ts">
+	import type { PageServerData } from '../$types';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
+	let { data }: { data: PageServerData } = $props();
+	console.log(data);
 </script>
 
 <SectionHeader

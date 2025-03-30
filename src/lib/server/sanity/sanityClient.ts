@@ -1,19 +1,19 @@
 import { createClient } from '@sanity/client';
-import 'dotenv/config';
+import { SANITY_TOKEN_R } from '$env/static/private';
+import { SANITY_TOKEN_RW } from '$env/static/private';
 
-const Sanity_Token = process.env.SANITY_TOKEN;
-
-export const writeClient = createClient({
-	projectId: '4mnt767e',
+export const readWriteClient = createClient({
+	projectId: 'mjp0hm2w',
 	dataset: 'production',
-	apiVersion: '2022-09-18',
-	token: Sanity_Token,
+	apiVersion: '2025-03-30',
+	token: SANITY_TOKEN_RW,
 	useCdn: false
 });
 
 export const readClient = createClient({
-	projectId: '4mnt767e',
+	projectId: 'mjp0hm2w',
 	dataset: 'production',
-	apiVersion: '2022-09-18',
-	useCdn: true
+	apiVersion: '2025-03-30',
+	token: SANITY_TOKEN_R,
+	useCdn: false
 });
