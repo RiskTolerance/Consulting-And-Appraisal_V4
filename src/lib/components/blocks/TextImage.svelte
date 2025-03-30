@@ -17,7 +17,7 @@
 	<div class="container mx-auto grid grid-cols-1 md:grid-cols-2">
 		<!-- Text -->
 		<div class="my-12 flex w-full items-center justify-center">
-			<div class="prose">
+			<div class="prose dark:prose-invert">
 				{@render text()}
 			</div>
 		</div>

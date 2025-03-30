@@ -1,29 +1,31 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-
 	let {
 		title = 'title',
-		body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		custom
-	}: { title: string; body?: string; custom?: Snippet } = $props();
+		body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+	}: { title: string; body?: string } = $props();
 </script>
 
+<!-- background gradiend -->
 <div
-	class="titlecard relative flex min-h-[45vh] w-full items-center justify-center px-8 pt-28 md:min-h-[35vh]"
+	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative min-h-[45vh] w-full bg-gradient-to-bl md:min-h-[35vh]"
 >
-	<div
-		class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark absolute inset-0 -z-20 bg-gradient-to-bl"
-	></div>
-	{#if custom}
-		{@render custom()}
-	{:else}
-		<div>
-			<h1 class="text-4xl font-bold">{title}</h1>
-			<p class="font-bold">
-				{body}
-			</p>
+	<!-- background pattern -->
+	<div class="titlecard absolute inset-0">
+		<!-- content container (set height for title text) -->
+		<div class="absolute top-1/2 h-14 w-full -translate-y-1/2 px-8 md:h-18">
+			<div
+				class="bg-brand-light dark:bg-brand-dark absolute top-0 left-0 h-full w-3/4 rounded-tr-sm rounded-br-sm"
+			></div>
+			<div class="relative container mx-auto flex h-full flex-col items-center justify-center">
+				<h1 class="text-3xl font-bold md:text-4xl">{title}</h1>
+				<p
+					class="absolute bottom-0 left-1/2 w-full max-w-[600px] -translate-x-1/2 translate-y-[calc(100%+20px)] text-sm md:text-xl"
+				>
+					{body}
+				</p>
+			</div>
 		</div>
-	{/if}
+	</div>
 </div>
 
 <style>

@@ -6,7 +6,7 @@
 
 <SectionHeader title="Contact Us" body="Get in touch with us!"></SectionHeader>
 
-<div class="sectionMarginX -mt-16 mb-16">
+<div class="sectionMarginX z-[1000] -mt-16 mb-16">
 	<form
 		class="bg-brand-light dark:bg-brand-teal-med flex w-full flex-col items-center space-y-4 rounded-sm px-10 py-6 shadow-lg lg:px-20 lg:py-14"
 	>
@@ -34,9 +34,13 @@
 				/>
 			</div>
 
-			<div class="flex space-x-2 lg:self-end">
+			<div class="flex items-center space-x-2 lg:self-end">
 				<label for="email">Subscribe to our newsletter?</label>
-				<input type="checkbox" />
+				<!-- TODO: figure out this input color shit -->
+				<input
+					class="border-brand-teal-med ring-brand-teal-light !accent-brand-teal-dark aspect-square h-full rounded-sm border-2"
+					type="checkbox"
+				/>
 			</div>
 		</div>
 

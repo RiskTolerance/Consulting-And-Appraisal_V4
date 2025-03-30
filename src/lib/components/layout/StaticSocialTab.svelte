@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { Twitter, Facebook, Linkedin } from '@lucide/svelte';
+	import FacebookIcon from '$lib/components/icons/FacebookIcon.svelte';
+	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
+	import TwitterIcon from '$lib/components/icons/TwitterIcon.svelte';
+
 	import { config } from '$lib/appConfig.svelte';
 </script>
 
@@ -9,25 +12,19 @@
 	>
 		<li>
 			<!-- TODO: replace with X -->
-			<a href={config.socialLinks.x}
-				><Twitter
-					class="dark:hover:stroke-brand-teal-light hover:stroke-brand-light dark:stroke-brand-light stroke-brand-dark hover:scale-105"
-				></Twitter></a
-			>
+			<a href={config.socialLinks.x}>
+				<TwitterIcon></TwitterIcon>
+			</a>
 		</li>
 		<li>
-			<a href={config.socialLinks.facebook}
-				><Facebook
-					class="dark:hover:stroke-brand-teal-light hover:stroke-brand-light dark:stroke-brand-light stroke-brand-dark hover:scale-105"
-				></Facebook></a
-			>
+			<a href={config.socialLinks.facebook}>
+				<FacebookIcon></FacebookIcon>
+			</a>
 		</li>
 		<li>
-			<a href={config.socialLinks.linkedin}
-				><Linkedin
-					class="dark:hover:stroke-brand-teal-light hover:stroke-brand-light dark:stroke-brand-light stroke-brand-dark hover:scale-105"
-				></Linkedin></a
-			>
+			<a href={config.socialLinks.linkedin}>
+				<LinkedinIcon></LinkedinIcon>
+			</a>
 		</li>
 	</ul>
 </div>

@@ -76,16 +76,14 @@
 	</p>
 {/snippet}
 
-<div>
-	<SectionHeader
-		title="About"
-		body="C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota."
-	></SectionHeader>
-	<BlockHeader title="Where We Come From"></BlockHeader>
+<SectionHeader
+	title="About"
+	body="C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota."
+></SectionHeader>
+<BlockHeader title="Where We Come From"></BlockHeader>
 
-	<TextImage text={wherewecomefrom} image={MR} aspectRatio={'landscape'}></TextImage>
-	<BlockHeader title="Who We Are"></BlockHeader>
-	<TextImage text={wade} image={Wade} aspectRatio={'portrait'}></TextImage>
-	<TextImage text={cooper} image={Cooper} aspectRatio={'portrait'}></TextImage>
-	<TextImage text={austin} image={Austin} aspectRatio={'portrait'}></TextImage>
-</div>
+<TextImage text={wherewecomefrom} image={MR} aspectRatio={'landscape'}></TextImage>
+<BlockHeader title="Who We Are"></BlockHeader>
+<TextImage text={wade} image={Wade} aspectRatio={'portrait'}></TextImage>
+<TextImage text={cooper} image={Cooper} aspectRatio={'portrait'}></TextImage>
+<TextImage text={austin} image={Austin} aspectRatio={'portrait'}></TextImage>
