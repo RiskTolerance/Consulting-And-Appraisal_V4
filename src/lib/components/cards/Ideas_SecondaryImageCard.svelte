@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto, preloadData } from '$app/navigation';
 	import SanityImage from '$lib/components/SanityImage.svelte';
+	import type { SanityImageAssetDocument } from '@sanity/client/stega';
 
 	let {
 		title,
@@ -8,7 +9,8 @@
 		date,
 		img,
 		slug
-	}: { title: string; author: string; date: Date; img: string; slug: string } = $props();
+	}: { title: string; author: string; date: string; img: SanityImageAssetDocument; slug: string } =
+		$props();
 
 	let preload = () => {
 		preloadData(`/ideas/${slug}`);
@@ -27,10 +29,18 @@
 	type="button"
 >
 	<div class="bg-brand-light absolute h-full w-full">
-		<!-- <SanityImage {img} /> -->
+		{#if img.metadata.lqip}
+			<SanityImage
+				img={img.url}
+				url={img.url}
+				lqip={img.metadata.lqip}
+				loaded={false}
+				alt={img.originalFilename ?? ''}
+			/>
+		{/if}
 	</div>
-	<div class="bg-opacity-80 bg-brand-dark z-10 mt-24 flex h-full w-full flex-grow flex-col">
-		<h2 class="my-4 px-6 text-xl lg:text-2xl">
+	<div class=" bg-brand-dark/80 text-brand-light z-10 mt-24 flex h-full w-full flex-grow flex-col">
+		<h2 class="my-4 px-6 text-left text-xl lg:text-2xl">
 			{title}
 		</h2>
 		<div class="mb-4 flex space-x-8 px-6 text-sm sm:text-base">

@@ -1,6 +1,11 @@
 <script lang="ts">
 	import BlockHeader from '$lib/components/blocks/BlockHeader.svelte';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
+	import type { PageServerData } from '../$types';
+
+	let { data }: { data: PageServerData } = $props();
+
+	console.log(data);
 </script>
 
 <SectionHeader

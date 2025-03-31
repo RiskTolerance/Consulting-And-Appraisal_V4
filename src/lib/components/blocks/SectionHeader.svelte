@@ -7,7 +7,7 @@
 
 <!-- background gradiend -->
 <div
-	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative -z-10 min-h-[45vh] w-full bg-gradient-to-bl md:min-h-[35vh]"
+	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative -z-10 min-h-[450px] w-full bg-gradient-to-bl"
 >
 	<!-- background pattern -->
 	<div class="titlecard absolute inset-0">
