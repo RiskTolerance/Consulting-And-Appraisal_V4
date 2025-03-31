@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto, preloadData } from '$app/navigation';
 	import SanityImage from '$lib/components/SanityImage.svelte';
+	import { Calendar, User } from '@lucide/svelte';
 	import type { SanityImageAssetDocument } from '@sanity/client/stega';
 
 	let {
@@ -39,17 +40,19 @@
 			/>
 		{/if}
 	</div>
-	<div class=" bg-brand-dark/80 text-brand-light z-10 mt-24 flex h-full w-full flex-grow flex-col">
-		<h2 class="my-4 px-6 text-left text-xl lg:text-2xl">
+	<div
+		class="bg-brand-teal-med/80 dark:bg-brand-dark/80 text-brand-light z-10 mt-24 flex h-full w-full flex-grow flex-col"
+	>
+		<h2 class="my-4 px-6 text-left text-xl font-bold lg:text-2xl">
 			{title}
 		</h2>
 		<div class="mb-4 flex space-x-8 px-6 text-sm sm:text-base">
 			<div class="flex space-x-2">
-				<i class="fa-solid fa-user pt-1"></i>
+				<User></User>
 				<p>{author}</p>
 			</div>
 			<div class="flex space-x-2">
-				<i class="fa-solid fa-calendar pt-1"></i>
+				<Calendar></Calendar>
 				<p>
 					{new Date(date).toLocaleDateString('en', {
 						month: 'short',

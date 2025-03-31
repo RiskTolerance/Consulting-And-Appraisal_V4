@@ -8,6 +8,7 @@
 	let { data }: { data: Posts } = $props();
 	let postData = $state({ posts: data?.posts });
 	const featuredPosts = postData.posts.filter((post) => post.featured);
+	console.log(featuredPosts);
 	const restPosts = postData.posts.filter((post) => !post.featured);
 	const primaryPost = featuredPosts[0];
 	const secondaryPosts = [featuredPosts[1], featuredPosts[2]];
@@ -35,11 +36,11 @@
 			{#if secondaryPosts}
 				{#each secondaryPosts as post}
 					<IdeasSecondaryImageCard
-						title={primaryPost.title}
-						author={primaryPost.author}
-						date={primaryPost.date}
-						img={primaryPost.img}
-						slug={primaryPost.slug}
+						title={post.title}
+						author={post.author}
+						date={post.date}
+						img={post.img}
+						slug={post.slug}
 					/>
 				{/each}
 			{:else}
