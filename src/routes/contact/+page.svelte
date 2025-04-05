@@ -2,7 +2,6 @@
 	import { enhance } from '$app/forms';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import BtnSolid from '$lib/components/buttons/Btn_Solid.svelte';
-	let { name, email } = $state({ name: '', email: '' });
 </script>
 
 <SectionHeader title="Contact Us" body="Get in touch with us!"></SectionHeader>
@@ -18,7 +17,7 @@
 			We would love to hear from you! Use the form below to send us a message. Alternitively, you
 			can send us a good ol' fashioned email, give us a call, or connect with us on social media.
 		</p>
-		<div class="flex w-full flex-col items-start space-y-5 lg:flex-row lg:space-y-0 lg:space-x-5">
+		<div class="flex w-full flex-wrap items-start gap-8 lg:flex-row lg:space-y-0 lg:space-x-5">
 			<div>
 				<label for="email">Name:</label>
 				<input
@@ -27,7 +26,6 @@
 					autocomplete="given-name"
 					class="border-brand-teal-med w-full rounded-sm border-2 px-5 py-3"
 					type="text"
-					bind:value={name}
 				/>
 			</div>
 
@@ -39,21 +37,11 @@
 					name="email"
 					placeholder="john.doe@email.com"
 					autocomplete="email"
-					bind:value={email}
-				/>
-			</div>
-
-			<div class="flex items-center space-x-2 lg:self-end">
-				<label for="email">Subscribe to our newsletter?</label>
-				<!-- TODO: figure out this input color shit -->
-				<input
-					class="border-brand-teal-med ring-brand-teal-light !accent-brand-teal-dark aspect-square h-full rounded-sm border-2"
-					type="checkbox"
 				/>
 			</div>
 		</div>
 
-		<div class="flex w-full flex-col items-end space-x-0 lg:flex-row lg:space-y-0 lg:space-x-5">
+		<div class="flex w-full flex-col items-end space-x-0 lg:space-y-0 lg:space-x-5">
 			<label class="w-full" for="message">Message:</label>
 			<textarea
 				class="border-brand-teal-med w-full rounded-sm border-2 px-5 py-3"
@@ -63,8 +51,17 @@
 				rows="10"
 			></textarea>
 		</div>
-		<div class="flex w-full justify-end">
-			<BtnSolid buttonText="Submit" />
+
+		<div class="flex items-center space-x-2">
+			<!-- TODO: figure out this input color shit -->
+			<input
+				class="border-brand-teal-med ring-brand-teal-light !accent-brand-teal-dark aspect-square rounded-sm border-2"
+				type="checkbox"
+				name="subscriber"
+			/>
+			<label class="text-xs md:text-sm" for="subscriber">Subscribe to our newsletter?</label>
 		</div>
+
+		<BtnSolid buttonText="Submit" />
 	</form>
 </div>

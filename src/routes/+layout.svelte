@@ -16,8 +16,12 @@
 	<link rel="stylesheet" href="https://use.typekit.net/fer8wuf.css" />
 </svelte:head>
 
-<Navigation />
-<MobileNavigation />
-<StaticSocialTab></StaticSocialTab>
-{@render children()}
-<Footer />
+<div class="flex min-h-screen flex-col justify-between">
+	<div>
+		<Navigation />
+		<MobileNavigation />
+		<StaticSocialTab></StaticSocialTab>
+		{@render children()}
+	</div>
+	<Footer />
+</div>
