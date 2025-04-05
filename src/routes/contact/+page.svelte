@@ -19,6 +19,9 @@
 			<div>
 				<label for="email">Name:</label>
 				<input
+					name="email"
+					placeholder="John Doe"
+					autocomplete="name"
 					class="border-brand-teal-med w-full rounded-sm border-2 px-5 py-3"
 					type="text"
 					bind:value={name}
@@ -30,6 +33,8 @@
 				<input
 					class="border-brand-teal-med w-full rounded-sm border-2 px-5 py-3"
 					type="text"
+					name="email"
+					autocomplete="email"
 					bind:value={email}
 				/>
 			</div>

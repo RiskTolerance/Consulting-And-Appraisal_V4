@@ -24,7 +24,7 @@
 			? 'justify-end gap-4'
 			: 'justify-between'}"
 	>
-		<a href="/" class="h-20 sm:h-26 md:block lg:h-32">
+		<a href="/" class="h-20 sm:h-26 md:block">
 			{#if state.darkMode}
 				<LogoDark></LogoDark>
 			{:else}

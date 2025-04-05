@@ -1,5 +1,10 @@
 <script lang="ts">
-	let { title, img, description }: { title: string; img: string; description: string } = $props();
+	import type { SanityImageAssetDocument } from '@sanity/client';
+	let {
+		title,
+		img,
+		serviceDescription
+	}: { title: string; img: SanityImageAssetDocument; serviceDescription: string } = $props();
 </script>
 
 <div class="flex overflow-clip rounded-lg bg-white shadow-lg lg:flex-col">
@@ -13,7 +18,7 @@
 			{title}
 		</h2>
 		<p class="mb-8 px-6 text-sm lg:px-8 lg:text-base">
-			{description}
+			{serviceDescription}
 		</p>
 	</div>
 </div>

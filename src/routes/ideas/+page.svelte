@@ -8,7 +8,6 @@
 	let { data }: { data: Posts } = $props();
 	let postData = $state({ posts: data?.posts });
 	const featuredPosts = postData.posts.filter((post) => post.featured);
-	console.log(featuredPosts);
 	const restPosts = postData.posts.filter((post) => !post.featured);
 	const primaryPost = featuredPosts[0];
 	const secondaryPosts = [featuredPosts[1], featuredPosts[2]];
@@ -20,7 +19,7 @@
 			labore et dolore magna aliqua."
 ></SectionHeader>
 
-<div class="sectionMarginX -mt-16">
+<div class="sectionMarginX z-[1000] -mt-16">
 	<div class="mb-10 grid grid-cols-1 gap-y-5 lg:grid-cols-3 lg:gap-x-5">
 		<div class="flex h-96 md:h-80 lg:col-span-2 lg:h-full">
 			<IdeasPrimaryImageCard
