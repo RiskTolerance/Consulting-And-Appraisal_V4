@@ -30,14 +30,8 @@
 	type="button"
 >
 	<div class="bg-brand-light absolute h-full w-full">
-		{#if img.metadata.lqip}
-			<SanityImage
-				img={img.url}
-				url={img.url}
-				lqip={img.metadata.lqip}
-				loaded={false}
-				alt={img.originalFilename ?? ''}
-			/>
+		{#if img}
+			<SanityImage {img} loaded={false} />
 		{/if}
 	</div>
 	<div

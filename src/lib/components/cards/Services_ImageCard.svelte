@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { SanityImageAssetDocument } from '@sanity/client';
+	import SanityImage from '../SanityImage.svelte';
 	let {
 		title,
 		img,
@@ -7,27 +8,19 @@
 	}: { title: string; img: SanityImageAssetDocument; serviceDescription: string } = $props();
 </script>
 
-<div class="flex overflow-clip rounded-lg bg-white shadow-lg lg:flex-col">
-	<div
-		id="hero-image"
-		class="flex h-full w-full lg:h-52 lg:w-full"
-		style="background-image: url({img});"
-	></div>
-	<div class="flex flex-col">
-		<h2 class="my-4 flex-grow px-6 text-xl lg:px-8 lg:text-3xl">
+<div
+	class="bg-brand-light dark:bg-brand-teal-dark flex overflow-clip rounded-sm shadow-lg lg:flex-col"
+>
+	<div class="flex w-1/3 lg:h-52 lg:w-full">
+		<SanityImage {img} loaded={false} />
+	</div>
+
+	<li class="flex h-fit w-2/3 flex-col justify-start lg:w-full">
+		<h2 class="my-4 px-6 text-xl lg:px-8 lg:text-3xl">
 			{title}
 		</h2>
 		<p class="mb-8 px-6 text-sm lg:px-8 lg:text-base">
 			{serviceDescription}
 		</p>
-	</div>
+	</li>
 </div>
-
-<style>
-	#hero-image {
-		min-width: 8rem;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 50% 60%;
-	}
-</style>

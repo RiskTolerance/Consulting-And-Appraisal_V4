@@ -36,15 +36,9 @@
 	class="dark:bg-brand-teal-med dark:shadow-brand-teal-light/20 relative flex w-full cursor-pointer flex-col overflow-hidden rounded-md shadow-lg duration-200 hover:scale-[1.01]"
 	type="button"
 >
-	<div class="absolute inset-0 h-full w-full">
-		{#if img.metadata.lqip}
-			<SanityImage
-				img={img.url}
-				url={img.url}
-				lqip={img.metadata.lqip}
-				loaded={false}
-				alt={img.originalFilename ?? ''}
-			/>
+	<div class="absolute inset-0">
+		{#if img}
+			<SanityImage {img} loaded={false} />
 		{/if}
 	</div>
 	<div class="absolute inset-0 flex items-end">

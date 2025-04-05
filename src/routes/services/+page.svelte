@@ -16,7 +16,7 @@
 	body="Quality appraisals for your properties. We're focused on providing you the best appraisal services so you can make well informed business decisions"
 ></SectionHeader>
 
-<div class="sectionMarginX z-[1000] -mt-16">
+<ul class="sectionMarginX z-[1000] -mt-16">
 	<div class="z-50 mb-10 grid w-full gap-x-8 gap-y-4 lg:grid-cols-3">
 		{#each featuredServices as service}
 			<Services_ImageCard
@@ -42,4 +42,4 @@
 			<p>loading</p>
 		{/each}
 	</div>
-</div>
+</ul>

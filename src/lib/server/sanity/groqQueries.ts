@@ -12,5 +12,17 @@ export const getServicesQuery: string = `*[_type == 'service']{
   "title":serviceName,
   "img":image.asset->,
   featured,
-  "serviceDescription":shortDescription[0].children[0].text,
+  "serviceDescription":serviceDescription[0].children[0].text,
   }`;
+
+export const writeContactUsQuery: string = `*[_type == 'contact']{
+  "name":name,
+  "email":email,
+  "message":message,
+  }`;
+
+export const getContactUsSubmissionQuery: string = `*[_type == 'contact']{
+  "name":name,
+  "email":email,
+  "message":message,
+}`;

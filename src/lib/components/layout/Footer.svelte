@@ -1,7 +1,7 @@
 <script lang="ts">
 	import FacebookIcon from '$lib/components/icons/FacebookIcon.svelte';
 	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
-	import TwitterIcon from '$lib/components/icons/TwitterIcon.svelte';
+	import TwitterIcon from '$lib/components/icons/XIcon.svelte';
 	import { ArrowRight, Building, MailCheck, Phone } from '@lucide/svelte';
 </script>
 
