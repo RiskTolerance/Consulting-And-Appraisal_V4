@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div id="footer-mailing-list">
-			<h4 class="mb-6 text-xl">Subscribe to our newsletter.<br /> Get our latest insights.</h4>
+			<h2 class="mb-6 text-xl">Subscribe to our newsletter.<br /> Get our latest insights.</h2>
 			<form class="flex flex-col items-end" action="POST">
 				<input
 					class="text-brand-dark mb-2 w-full rounded-sm bg-teal-50 text-sm font-light"
@@ -40,7 +40,7 @@
 			</form>
 		</div>
 		<div id="footer-specilization" class="flex flex-col gap-4">
-			<h5 class="text-xl">Specialization</h5>
+			<h2 class="text-xl">Specialization</h2>
 			<ul class="ml-8 list-disc">
 				<li>Capitalization rate studies</li>
 				<li>Estate Planning & Probate</li>
@@ -48,7 +48,7 @@
 			</ul>
 			<a class="hover: underline" href="/services">and much more...</a>
 		</div>
-		<div class="flex items-center gap-6 md:hidden" id="footer-socials">
+		<div class="flex items-center gap-6 md:hidden">
 			<a
 				aria-label="Linkedin Social Link"
 				class=" fill-brand-light hover:fill-brand-teal-light cursor-pointer"

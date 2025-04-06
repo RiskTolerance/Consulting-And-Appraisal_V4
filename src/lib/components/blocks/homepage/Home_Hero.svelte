@@ -10,6 +10,7 @@
 		{#if state.darkMode}
 			<enhanced:img
 				class="hero-image h-full w-full object-cover object-center"
+				fetchpriority="high"
 				src={heroImageDark}
 				sizes="(min-width: 1920px) 1600px, 
 					 (min-width: 1440px) 1280px,
@@ -22,6 +23,7 @@
 		{:else}
 			<enhanced:img
 				class="hero-image h-full w-full object-cover object-center"
+				fetchpriority="high"
 				src={heroImage}
 				sizes="(min-width: 1920px) 1600px, 
 					 (min-width: 1440px) 1280px,
