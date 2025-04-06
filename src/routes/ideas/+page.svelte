@@ -19,6 +19,15 @@
 	const secondaryPosts = [featuredPosts[1], featuredPosts[2]];
 </script>
 
+<Meta
+	title="CAS | Ideas"
+	description="Helpful insights and practical advice on real estate trends, market analysis, and property appraisals—straight from our experienced team."
+	ogDescription="Stay informed with useful real estate insights from CAS. Practical, jargon-free advice to make better property decisions."
+	twitterTitle="CAS Ideas | Helpful Real Estate Insights"
+	twitterDescription="Practical, helpful real estate insights without the fluff—straight from experienced appraisal professionals in Sioux Falls, SD."
+	ogImage={metaog}
+	twitterImage={metaog}
+/>
 <SectionHeader
 	title="Ideas"
 	body="Helpful insights and updates from the field. We share what we’ve learned to help you stay informed and make sound decisions—without the fluff."

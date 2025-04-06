@@ -17,6 +17,15 @@
 	const restServices = serviceData.services.filter((service) => !service.featured);
 </script>
 
+<Meta
+	title="CAS | Services"
+	description="Explore our range of reliable property appraisal and consulting services. Expert advice to help you confidently manage real estate decisions."
+	ogDescription="CAS offers professional appraisal and consulting services including legal support, market analysis, estate planning, and more."
+	twitterTitle="CAS Services | Property Appraisals & Consulting"
+	twitterDescription="Comprehensive, friendly appraisal services and real estate consulting. Making your property decisions easier across the Midwest."
+	ogImage={metaog}
+	twitterImage={metaog}
+/>
 <SectionHeader
 	title="Services"
 	body="Quality appraisals for your properties. We're focused on providing you the best appraisal services so you can make well informed business decisions"

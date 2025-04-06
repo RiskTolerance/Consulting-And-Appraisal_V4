@@ -21,15 +21,13 @@
 </script>
 
 <Meta
-	title="Home"
-	description="this is our site"
-	ogDescription="Ya"
+	title="CAS | Home"
+	description="Professional, reliable property appraisals and consulting in South Dakota, Nebraska, Iowa, and Minnesota. Friendly advice to help you make informed decisions."
+	ogDescription="Trusted real estate appraisal and consulting firm serving the Midwest from Sioux Falls, SD. Get clear, expert advice with a friendly approach."
+	twitterTitle="CAS | Trusted Appraisal & Consulting"
+	twitterDescription="Clear, reliable property appraisal services and consulting—helpful, approachable, and rooted in the Midwest."
 	ogImage={metaog}
-	twitterTitle=""
-	twitterDescription="Hey"
 	twitterImage={metaog}
-	favicon={meta500}
-	favicon512={meta512}
 />
 <Hero></Hero>
 <HomeSection

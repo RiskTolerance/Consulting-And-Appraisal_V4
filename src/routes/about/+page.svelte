@@ -81,7 +81,15 @@
 		delivering professional and precise results in every project he undertakes.
 	</p>
 {/snippet}
-
+<Meta
+	title="CAS | About"
+	description="Meet our experienced team at Consulting & Appraisal Services, providing trusted property valuation and guidance across the Midwest."
+	ogDescription="Learn more about our team at CAS—experienced appraisers providing friendly, dependable real estate consulting from Sioux Falls, SD."
+	twitterTitle="About CAS | Meet Our Team"
+	twitterDescription="Experienced property appraisal and consulting experts, committed to friendly, reliable service in South Dakota and beyond."
+	ogImage={metaog}
+	twitterImage={metaog}
+/>
 <SectionHeader
 	title="About"
 	body="C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota."

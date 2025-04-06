@@ -18,6 +18,15 @@
 	});
 </script>
 
+<Meta
+	title="CAS | Contact"
+	description="Reach out to Consulting & Appraisal Services in Sioux Falls, SD for reliable, friendly help with property appraisals and real estate consulting."
+	ogDescription="Need real estate advice or appraisal services? Contact CAS in Sioux Falls for helpful, straightforward guidance today."
+	twitterTitle="Contact CAS | Friendly Property Experts"
+	twitterDescription="Got property questions? Contact CAS for friendly, helpful appraisal and consulting services based in Sioux Falls, SD."
+	ogImage={metaog}
+	twitterImage={metaog}
+/>
 <SectionHeader title="Contact Us" body="Get in touch with us!"></SectionHeader>
 
 <div class="sectionMarginX z-[1000] -mt-16 mb-16">
