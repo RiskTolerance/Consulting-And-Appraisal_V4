@@ -1,7 +1,15 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { z } from 'zod';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import BtnSolid from '$lib/components/buttons/Btn_Solid.svelte';
+
+	const schema = z.object({
+		name: z.string().min(1, { message: 'Name is required' }),
+		email: z.string().email({ message: 'Invalid email address' }),
+		message: z.string().min(1, { message: 'Message is required' }),
+		subscriber: z.boolean().optional()
+	});
 </script>
 
 <SectionHeader title="Contact Us" body="Get in touch with us!"></SectionHeader>
