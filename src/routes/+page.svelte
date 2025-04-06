@@ -7,7 +7,7 @@
 	import section2Img from '$lib/assets/images/idea.jpg?enhanced';
 	import section3Img from '$lib/assets/images/phone.jpg?enhanced';
 	const placeholderText =
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem amet incidunt, dignissimos quae nulla ad porro nam deserunt. Temporibus architecto necessitatibus in saepe praesentium eum molestias alias odit nihil omnis odio ipsam sit, quidem quia maxime tempore mollitia corrupti ipsum.';
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem amet incidunt, dignissimos quae nulla ad porro nam deserunt. Temporibus architecto necessitatibus in saepe praesentium eum molestias alias odit nihil omnis odio ipsam sit, quidem quia maxime tempore mollitia corrupti ipsum!';
 </script>
 
 <Hero></Hero>
