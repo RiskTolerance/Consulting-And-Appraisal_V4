@@ -9,9 +9,16 @@
 		author,
 		date,
 		img,
+		imgAlt,
 		slug
-	}: { title: string; author: string; date: string; img: SanityImageAssetDocument; slug: string } =
-		$props();
+	}: {
+		title: string;
+		author: string;
+		date: string;
+		img: SanityImageAssetDocument;
+		imgAlt: string;
+		slug: string;
+	} = $props();
 
 	let preload = () => {
 		preloadData(`/ideas/${slug}`);
@@ -31,7 +38,7 @@
 >
 	<div class="bg-brand-light absolute h-full w-full">
 		{#if img}
-			<SanityImage {img} loaded={false} />
+			<SanityImage {img} {imgAlt} loaded={false} />
 		{/if}
 	</div>
 	<div

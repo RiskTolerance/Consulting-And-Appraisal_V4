@@ -10,6 +10,7 @@ export type Posts = {
 		slug: string;
 		author: string;
 		img: SanityImageAssetDocument;
+		imgAlt: string;
 		featured: boolean;
 		body: string; // Could be undefined if no content
 		excerpt: string; // Could be undefined if no excerpt

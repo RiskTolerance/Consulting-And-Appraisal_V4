@@ -2,9 +2,11 @@
 	import type { SanityImageAssetDocument } from '@sanity/client';
 	let {
 		img,
+		imgAlt,
 		loaded = false
 	}: {
 		img: SanityImageAssetDocument;
+		imgAlt?: string;
 		loaded: boolean;
 	} = $props();
 </script>
@@ -22,7 +24,7 @@
 			style="opacity: {loaded ? 1 : 0}; "
 			class="absolute inset-0 h-full w-full object-cover transition-opacity duration-200"
 			src={img.url}
-			alt={img.alt}
+			alt={imgAlt ?? 'a generic image'}
 			onload={() => (loaded = true)}
 		/>
 	</div>

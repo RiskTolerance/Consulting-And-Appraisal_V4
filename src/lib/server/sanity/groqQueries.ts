@@ -3,6 +3,7 @@ export const getPostsQuery: string = `*[_type == 'post']{
     title,
     "slug":slug.current,
     "img":mainImage.asset->,
+    "imgAlt":image.alt,
     "featured": featured,
     "body":body[0].children[0].text,
     "excerpt":excerpt[0].children[0].text
@@ -11,6 +12,7 @@ export const getPostsQuery: string = `*[_type == 'post']{
 export const getServicesQuery: string = `*[_type == 'service']{
   "title":serviceName,
   "img":image.asset->,
+  "imgAlt":image.alt,
   featured,
   "serviceDescription":serviceDescription[0].children[0].text,
   }`;

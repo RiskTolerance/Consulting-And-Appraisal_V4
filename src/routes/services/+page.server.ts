@@ -8,6 +8,7 @@ export type Services = {
 		title: string;
 		featured: boolean;
 		img: SanityImageAssetDocument;
+		imgAlt: string;
 		serviceDescription: string;
 	}[];
 };

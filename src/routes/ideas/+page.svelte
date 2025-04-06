@@ -42,6 +42,7 @@
 				date={primaryPost.date}
 				excerpt={primaryPost.excerpt}
 				img={primaryPost.img}
+				imgAlt={primaryPost.imgAlt}
 				slug={primaryPost.slug}
 			></IdeasPrimaryImageCard>
 		</div>
@@ -53,6 +54,7 @@
 						author={post.author}
 						date={post.date}
 						img={post.img}
+						imgAlt={post.imgAlt}
 						slug={post.slug}
 					/>
 				{/each}

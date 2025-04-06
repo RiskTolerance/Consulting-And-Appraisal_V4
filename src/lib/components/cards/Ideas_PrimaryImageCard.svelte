@@ -10,6 +10,7 @@
 		date,
 		excerpt,
 		img,
+		imgAlt,
 		slug
 	}: {
 		title: string;
@@ -17,6 +18,7 @@
 		date: string;
 		excerpt: string;
 		img: SanityImageAssetDocument;
+		imgAlt?: string;
 		slug: string;
 	} = $props();
 
@@ -38,7 +40,7 @@
 >
 	<div class="absolute inset-0">
 		{#if img}
-			<SanityImage {img} loaded={false} />
+			<SanityImage {img} {imgAlt} loaded={false} />
 		{/if}
 	</div>
 	<div class="absolute inset-0 flex items-end">
