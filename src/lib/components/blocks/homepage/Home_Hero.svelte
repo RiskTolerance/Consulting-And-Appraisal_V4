@@ -9,17 +9,12 @@
 	<div class="absolute inset-0 -z-10">
 		{#if state.darkMode}
 			<enhanced:img
-				data-sveltekit-preload-code="preload"
-				class="h-full w-full object-cover"
+				class="h-full w-full object-cover object-center"
 				src={heroImageDark}
-				alt="building"
+				alt="building at night"
 			></enhanced:img>
 		{:else}
-			<enhanced:img
-				data-sveltekit-preload-code="preload"
-				class="h-full w-full object-cover"
-				src={heroImage}
-				alt="building"
+			<enhanced:img class="h-full w-full object-cover object-center" src={heroImage} alt="building"
 			></enhanced:img>
 		{/if}
 	</div>
