@@ -10,17 +10,27 @@
 		{#if state.darkMode}
 			<enhanced:img
 				class="h-full w-full object-cover object-center"
-				src={heroImageDark}
-				sizes="min(1280px, 100vw)"
-				alt="building at night"
-			></enhanced:img>
+				src={`${heroImageDark}?w=1600;1280;960;640;480`}
+				sizes="(min-width: 1920px) 1600px, 
+					 (min-width: 1440px) 1280px,
+					 (min-width: 1024px) 960px,
+					 (min-width: 640px) 640px,
+					 100vw"
+				alt="building"
+			>
+			</enhanced:img>
 		{:else}
 			<enhanced:img
 				class="h-full w-full object-cover object-center"
-				src={heroImage}
-				sizes="min(1280px, 100vw)"
+				src={`${heroImage}?w=1600;1280;960;640;480`}
+				sizes="(min-width: 1920px) 1600px, 
+					 (min-width: 1440px) 1280px,
+					 (min-width: 1024px) 960px,
+					 (min-width: 640px) 640px,
+					 100vw"
 				alt="building"
-			></enhanced:img>
+			>
+			</enhanced:img>
 		{/if}
 	</div>
 	<div
