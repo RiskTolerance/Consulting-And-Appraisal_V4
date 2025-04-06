@@ -11,10 +11,15 @@
 			<enhanced:img
 				class="h-full w-full object-cover object-center"
 				src={heroImageDark}
+				sizes="min(1280px, 100vw)"
 				alt="building at night"
 			></enhanced:img>
 		{:else}
-			<enhanced:img class="h-full w-full object-cover object-center" src={heroImage} alt="building"
+			<enhanced:img
+				class="h-full w-full object-cover object-center"
+				src={heroImage}
+				sizes="min(1280px, 100vw)"
+				alt="building"
 			></enhanced:img>
 		{/if}
 	</div>

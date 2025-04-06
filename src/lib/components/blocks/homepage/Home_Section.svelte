@@ -7,6 +7,7 @@
 		btnText,
 		btnHref,
 		image,
+		imageAlt,
 		topMarginClass = 'mt-0',
 		bottomMarginClass = 'mb-0',
 		reverse = false
@@ -16,6 +17,7 @@
 		btnText: string;
 		btnHref: string;
 		image: Picture;
+		imageAlt: string;
 		topMarginClass?: string;
 		bottomMarginClass?: string;
 		reverse: boolean;
@@ -47,7 +49,7 @@
 				? 'order-first'
 				: 'order-first md:order-last'} z-10 max-h-96 w-full object-cover lg:w-full"
 			src={image}
-			alt=""
+			alt={imageAlt}
 		></enhanced:img>
 	</div>
 </div>

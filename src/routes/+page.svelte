@@ -36,6 +36,7 @@
 	btnText="Visit Services Page"
 	btnHref="/services"
 	image={section1Img}
+	imageAlt="a man buttons his suit"
 	topMarginClass="-top-32"
 	bottomMarginClass="-bottom-10"
 	reverse={false}
@@ -46,6 +47,7 @@
 	btnText="Visit Ideas Page"
 	btnHref="/ideas"
 	image={section2Img}
+	imageAlt="a lightbulb with chalk diagram"
 	topMarginClass="-top-10"
 	bottomMarginClass="-bottom-10"
 	reverse={true}
@@ -56,6 +58,7 @@
 	btnText="Visit Contact Page"
 	btnHref="/contact"
 	image={section3Img}
+	imageAlt="an old telephone"
 	topMarginClass="-top-10"
 	bottomMarginClass="-bottom-10"
 	reverse={false}
