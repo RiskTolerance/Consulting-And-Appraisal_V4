@@ -7,15 +7,6 @@
 	import StaticSocialTab from '$lib/components/layout/StaticSocialTab.svelte';
 </script>
 
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.bunny.net" />
-	<link
-		href="https://fonts.bunny.net/css?family=raleway:300,300i,500,500i,800,800i"
-		rel="stylesheet"
-	/>
-	<link rel="stylesheet" href="https://use.typekit.net/fer8wuf.css" />
-</svelte:head>
-
 <div class="flex min-h-screen flex-col justify-between">
 	<div>
 		<Navigation />

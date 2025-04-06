@@ -4,7 +4,6 @@
 	import { state } from '$lib/appState.svelte';
 	import { innerWidth } from 'svelte/reactivity/window';
 
-	console.log(innerWidth.current);
 	$effect(() => {
 		if (innerWidth.current && innerWidth.current > 768) {
 			state.mobileNavToggle = false;

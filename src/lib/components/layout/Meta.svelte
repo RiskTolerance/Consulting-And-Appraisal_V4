@@ -25,9 +25,7 @@
 
 	// Ensure the image URLs are absolute
 	const baseUrl = 'https://www.consultingappraisal.com';
-	console.log(ogImage.startsWith('http'));
 	ogImage = ogImage.startsWith('http') ? `${baseUrl}${ogImage}` : ogImage;
-	console.log(ogImage);
 	twitterImage = twitterImage.startsWith('http') ? `${baseUrl}${twitterImage}` : twitterImage;
 	// favicon = favicon.startsWith('http') ? `${baseUrl}${favicon}` : favicon;
 	// favicon512 = favicon512.startsWith('http') ? `${baseUrl}${favicon512}` : favicon512;
