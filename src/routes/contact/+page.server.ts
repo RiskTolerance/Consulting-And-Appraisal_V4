@@ -56,7 +56,7 @@ export const actions = {
 					</div>
 				`;
 
-			resend.emails.send({
+			const { data, error } = await resend.emails.send({
 				from: 'admin@consultingappraisal.com',
 				to: ['isaac.druin@gmail.com', 'wade.druin@consultingappraisal.com'],
 				subject: 'New Form Response',
@@ -64,7 +64,8 @@ export const actions = {
 			});
 
 			console.log('Mutations successful:', result);
-			console.log('Email successful:', resend);
+			console.log('Email successful:', data);
+			console.log('Email errors', error);
 		} catch (err) {
 			console.error('Mutation failed:', err.message);
 		}

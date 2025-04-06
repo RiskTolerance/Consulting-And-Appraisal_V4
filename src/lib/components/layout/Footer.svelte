@@ -17,6 +17,9 @@
 			</div>
 			<div class="contact-item flex gap-2">
 				<MailCheck></MailCheck>
+				<a target="_blank" href="mailto:hello@consultingappraisal.com"
+					>hello@consultingappraisal.com</a
+				>
 			</div>
 			<div class="contact-item flex gap-2">
 				<Building></Building>
