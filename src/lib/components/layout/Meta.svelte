@@ -9,9 +9,7 @@
 		twitterTitle,
 		twitterDescription,
 		twitterImage,
-		twitterCardType = 'summary_large_image',
-		favicon,
-		favicon512
+		twitterCardType = 'summary_large_image'
 	} = $props<{
 		title: string;
 		description: string;
@@ -23,16 +21,16 @@
 		twitterDescription: string;
 		twitterImage: string;
 		twitterCardType?: string;
-		favicon: string;
-		favicon512: string;
 	}>();
 
 	// Ensure the image URLs are absolute
-	const baseUrl = 'https://adept-dev.website-7f5.pages.dev'; // Replace with your actual domain
-	ogImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
-	twitterImage = twitterImage.startsWith('http') ? twitterImage : `${baseUrl}${twitterImage}`;
-	favicon = favicon.startsWith('http') ? favicon : `${baseUrl}${favicon}`;
-	favicon512 = favicon512.startsWith('http') ? favicon512 : `${baseUrl}${favicon512}`;
+	const baseUrl = 'https://www.consultingappraisal.com';
+	console.log(ogImage.startsWith('http'));
+	ogImage = ogImage.startsWith('http') ? `${baseUrl}${ogImage}` : ogImage;
+	console.log(ogImage);
+	twitterImage = twitterImage.startsWith('http') ? `${baseUrl}${twitterImage}` : twitterImage;
+	// favicon = favicon.startsWith('http') ? `${baseUrl}${favicon}` : favicon;
+	// favicon512 = favicon512.startsWith('http') ? `${baseUrl}${favicon512}` : favicon512;
 </script>
 
 <svelte:head>
@@ -54,8 +52,7 @@
 	<meta name="twitter:image" content={twitterImage} />
 
 	<!-- Favicon -->
-	<!-- <link rel="icon" type="image/webp" href={favicon} sizes="32x32" />
-	<link rel="icon" type="image/webp" href={favicon512} sizes="512x512" />
-	<link rel="apple-touch-icon" href={favicon512} /> -->
-	<!-- <link rel="manifest" href="/site.webmanifest" /> -->
+	<!-- <link rel="icon" type="image/webp" href={favicon} sizes="32x32" /> -->
+	<!-- <link rel="icon" type="image/webp" href={favicon512} sizes="512x512" /> -->
+	<!-- <link rel="apple-touch-icon" href={favicon512} /> -->
 </svelte:head>

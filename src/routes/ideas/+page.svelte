@@ -1,4 +1,10 @@
 <script lang="ts">
+	// meta
+	import Meta from '$lib/components/layout/Meta.svelte';
+	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
+	import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
+	import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
+	//
 	import type { PageServerData } from '../$types';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import type { Posts } from './proxy+page.server';
@@ -15,8 +21,7 @@
 
 <SectionHeader
 	title="Ideas"
-	body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua."
+	body="Helpful insights and updates from the field. We share what we’ve learned to help you stay informed and make sound decisions—without the fluff."
 ></SectionHeader>
 
 <div class="sectionMarginX z-[1000] -mt-16">

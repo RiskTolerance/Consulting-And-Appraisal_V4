@@ -1,4 +1,10 @@
 <script lang="ts">
+	// meta
+	import Meta from '$lib/components/layout/Meta.svelte';
+	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
+	import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
+	import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
+	//
 	import { enhance } from '$app/forms';
 	import { z } from 'zod';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';

@@ -1,4 +1,10 @@
 <script lang="ts">
+	// meta
+	import Meta from '$lib/components/layout/Meta.svelte';
+	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
+	import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
+	import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
+	//
 	import BlockHeader from '$lib/components/blocks/BlockHeader.svelte';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import Services_Card from '$lib/components/cards/Services_Card.svelte';

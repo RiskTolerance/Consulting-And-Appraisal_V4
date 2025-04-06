@@ -6,14 +6,35 @@
 	import section1Img from '$lib/assets/images/suit.jpg?enhanced';
 	import section2Img from '$lib/assets/images/idea.jpg?enhanced';
 	import section3Img from '$lib/assets/images/phone.jpg?enhanced';
-	const placeholderText =
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem amet incidunt, dignissimos quae nulla ad porro nam deserunt. Temporibus architecto necessitatibus in saepe praesentium eum molestias alias odit nihil omnis odio ipsam sit, quidem quia maxime tempore mollitia corrupti ipsum?';
+	// meta
+	import Meta from '$lib/components/layout/Meta.svelte';
+	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
+	import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
+	import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
+	// TODO: remove this
+	const servicesText =
+		'We’re here to help you make confident decisions with clear, reliable property appraisals and consulting. Whether it’s a farm, a business, or something in between, you can count on us to give it the time and attention it deserves.';
+	const ideasText =
+		'We like to share what we’ve learned along the way. From local market trends to tips on property planning, our ideas section offers helpful info without all the jargon—just good, honest insights.';
+	const contactText =
+		'Got questions? We’re happy to chat. Whether you’re ready to get started or just want to learn more, feel free to reach out. We’ll do our best to point you in the right direction.';
 </script>
 
+<Meta
+	title="Home"
+	description="this is our site"
+	ogDescription="Ya"
+	ogImage={metaog}
+	twitterTitle=""
+	twitterDescription="Hey"
+	twitterImage={metaog}
+	favicon={meta500}
+	favicon512={meta512}
+/>
 <Hero></Hero>
 <HomeSection
 	title="Services"
-	body={placeholderText}
+	body={servicesText}
 	btnText="Visit Services Page"
 	btnHref="/services"
 	image={section1Img}
@@ -23,7 +44,7 @@
 ></HomeSection>
 <HomeSection
 	title="Ideas"
-	body={placeholderText}
+	body={ideasText}
 	btnText="Visit Ideas Page"
 	btnHref="/ideas"
 	image={section2Img}
@@ -33,7 +54,7 @@
 ></HomeSection>
 <HomeSection
 	title="Contact"
-	body={placeholderText}
+	body={contactText}
 	btnText="Visit Contact Page"
 	btnHref="/contact"
 	image={section3Img}
