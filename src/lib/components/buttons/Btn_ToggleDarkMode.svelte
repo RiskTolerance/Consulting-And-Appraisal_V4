@@ -13,7 +13,7 @@
 </script>
 
 <Switch.Root
-	aria-label="dark-mode toggle"
+	title="dark-mode toggle"
 	bind:checked={state.darkMode}
 	class="{state.mobileNavToggle
 		? 'dark:bg-brand-teal-med'
