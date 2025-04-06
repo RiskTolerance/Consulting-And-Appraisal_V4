@@ -37,7 +37,7 @@
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 	 */
 	//  using CAS - Workers Builds - 2025-04-06 03:45
-	"vars": { "CLOUDFLARE_API_TOKEN": "RbxWNbPCCuOrWJyVyXoRDwkJ8Q7oVLhGseGYjAaC" }
+	"vars": { "CLOUDFLARE_API_TOKEN": "Fz03EyStPKuZg-a96-0eo3Wl53PHMgpW5gP37ya5" }
 	/**
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
