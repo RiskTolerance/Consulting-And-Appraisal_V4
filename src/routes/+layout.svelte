@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { state } from '$lib/appState.svelte';
 	let { children } = $props();
 	import Navigation from '$lib/components/layout/Navigation.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
@@ -7,7 +8,7 @@
 	import StaticSocialTab from '$lib/components/layout/StaticSocialTab.svelte';
 </script>
 
-<div class="flex min-h-screen flex-col justify-between">
+<div class="flex min-h-screen flex-col justify-between {state.mobileNavToggle ? 'no-scroll' : ''}">
 	<div>
 		<Navigation />
 		<MobileNavigation />

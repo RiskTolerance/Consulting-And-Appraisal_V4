@@ -24,3 +24,9 @@
 h1, h2, h3, h4, h5 {
   font-family: var(--font-header);
 }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none; /* prevents touch scrolling */
+}

@@ -24,7 +24,7 @@
 		<div
 			class="bg-brand-light dark:bg-brand-teal-dark absolute top-0 right-0 {!state.mobileNavToggle
 				? 'translage-x-full'
-				: ''} bottom-0 flex w-[30vw] min-w-[350px] items-center justify-center"
+				: ''} bottom-0 flex w-[30vw] min-w-[380px] items-center justify-center"
 		>
 			<ul class="flex flex-col gap-4 text-2xl font-bold">
 				{#each config.navLinks as { href, label }}

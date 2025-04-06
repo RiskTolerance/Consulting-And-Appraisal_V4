@@ -21,7 +21,7 @@
 <div class="absolute z-[1000] w-full px-4 py-8 md:px-8">
 	<nav
 		class=" container mx-auto flex justify-between {state.mobileNavToggle
-			? 'justify-end gap-4'
+			? 'justify-end gap-6'
 			: 'justify-between'}"
 	>
 		<a aria-label="Home" href="/" class="h-20 sm:h-26 md:block">

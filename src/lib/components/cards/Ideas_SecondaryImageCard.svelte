@@ -33,7 +33,7 @@
 	onmouseover={preload}
 	onfocus={preload}
 	onclick={nav}
-	class="relative flex cursor-pointer overflow-hidden rounded-md shadow-lg lg:flex-col"
+	class="relative flex cursor-pointer overflow-hidden rounded-md shadow-lg duration-200 hover:scale-[1.01] lg:flex-col"
 	type="button"
 >
 	<div class="bg-brand-light absolute h-full w-full">
