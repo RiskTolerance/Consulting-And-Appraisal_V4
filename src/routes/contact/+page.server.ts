@@ -57,7 +57,7 @@ export const actions = {
 				`;
 
 			resend.emails.send({
-				from: 'cas@resend.dev',
+				from: 'admin@consultingappraisal.com',
 				to: ['isaac.druin@gmail.com', 'wade.druin@consultingappraisal.com'],
 				subject: 'New Form Response',
 				html: emailHtml
