@@ -9,7 +9,7 @@
 	<div class="absolute inset-0 -z-10">
 		{#if state.darkMode}
 			<enhanced:img
-				class="h-full w-full object-cover object-center"
+				class="hero-image h-full w-full object-cover object-center"
 				src={heroImageDark}
 				sizes="(min-width: 1920px) 1600px, 
 					 (min-width: 1440px) 1280px,
@@ -21,7 +21,7 @@
 			</enhanced:img>
 		{:else}
 			<enhanced:img
-				class="h-full w-full object-cover object-center"
+				class="hero-image h-full w-full object-cover object-center"
 				src={heroImage}
 				sizes="(min-width: 1920px) 1600px, 
 					 (min-width: 1440px) 1280px,

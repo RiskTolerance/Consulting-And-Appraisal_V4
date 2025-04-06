@@ -39,7 +39,7 @@
 			</form>
 		</div>
 		<div id="footer-specilization" class="flex flex-col gap-4">
-			<h4 class="text-xl">Specialization</h4>
+			<h5 class="text-xl">Specialization</h5>
 			<ul class="ml-8 list-disc">
 				<li>Capitalization rate studies</li>
 				<li>Estate Planning & Probate</li>
