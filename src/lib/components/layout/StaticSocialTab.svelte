@@ -12,12 +12,17 @@
 	>
 		<li>
 			<!-- TODO: replace with X -->
-			<a class="fill-brand-light hover:fill-brand-dark cursor-pointer" href={config.socialLinks.x}>
+			<a
+				aria-label="X Social Link"
+				class="fill-brand-light hover:fill-brand-dark cursor-pointer"
+				href={config.socialLinks.x}
+			>
 				<XIcon></XIcon>
 			</a>
 		</li>
 		<li>
 			<a
+				aria-label="Facebook Social Link"
 				class=" fill-brand-light hover:fill-brand-dark cursor-pointer"
 				href={config.socialLinks.facebook}
 			>
@@ -26,6 +31,7 @@
 		</li>
 		<li>
 			<a
+				aria-label="Linkedin Social Link"
 				class=" fill-brand-light hover:fill-brand-dark cursor-pointer"
 				href={config.socialLinks.linkedin}
 			>

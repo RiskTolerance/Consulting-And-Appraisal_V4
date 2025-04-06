@@ -24,12 +24,13 @@
 			</div>
 		</div>
 		<div id="footer-mailing-list">
-			<h3 class="mb-6">Subscribe to our newsletter.<br /> Get our latest insights.</h3>
+			<h4 class="mb-6 text-xl">Subscribe to our newsletter.<br /> Get our latest insights.</h4>
 			<form class="flex flex-col items-end" action="POST">
 				<input
-					class="mb-2 w-full rounded-sm bg-teal-50 text-sm font-light"
+					class="text-brand-dark mb-2 w-full rounded-sm bg-teal-50 text-sm font-light"
 					type="email"
-					placeholder="Enter your email address"
+					placeholder="john.doe@email.com"
+					autocomplete="email"
 				/>
 				<button
 					class="hover:bg-brand-light hover:text-brand-teal-med flex w-[150px] cursor-pointer justify-start gap-2 rounded-sm px-4 py-2 transition-all duration-300 hover:gap-4"
@@ -38,7 +39,7 @@
 			</form>
 		</div>
 		<div id="footer-specilization" class="flex flex-col gap-4">
-			<h3>Specialization</h3>
+			<h4 class="text-xl">Specialization</h4>
 			<ul class="ml-8 list-disc">
 				<li>Capitalization rate studies</li>
 				<li>Estate Planning & Probate</li>

@@ -57,7 +57,7 @@
 					/>
 				{/each}
 			{:else}
-				<div class="h-full w-full bg-gray-100"></div>
+				<div class="bg-brand-light h-full w-full"></div>
 			{/if}
 		</div>
 	</div>
@@ -67,10 +67,18 @@
 			<h1 class="text-3xl font-bold md:border-r-4 md:pr-12">Older Posts</h1>
 		</div>
 		<div class="flex w-full flex-col md:w-3/4 md:pl-12">
-			<div class="mb-10 h-20 w-full rounded-md bg-gray-100"></div>
-			<div class="mb-10 h-20 w-full rounded-md bg-gray-100"></div>
-			<div class="mb-10 h-20 w-full rounded-md bg-gray-100"></div>
-			<div class="mb-10 h-20 w-full rounded-md bg-gray-100"></div>
+			<div
+				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
+			></div>
+			<div
+				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
+			></div>
+			<div
+				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
+			></div>
+			<div
+				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
+			></div>
 		</div>
 	</div>
 </div>

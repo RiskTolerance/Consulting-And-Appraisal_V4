@@ -24,7 +24,7 @@
 			? 'justify-end gap-4'
 			: 'justify-between'}"
 	>
-		<a href="/" class="h-20 sm:h-26 md:block">
+		<a aria-label="Home" href="/" class="h-20 sm:h-26 md:block">
 			{#if state.darkMode}
 				<LogoDark></LogoDark>
 			{:else}
@@ -37,9 +37,9 @@
 			<ul
 				class="dark:text-brand-light text-md hidden items-center gap-6 font-bold md:flex lg:text-lg"
 			>
-				{#each config.navLinks as { href, label }}
+				{#each config.navLinks as { href, label, aria }}
 					<li class=" {getNavLinkClass(href)}">
-						<a {href}>{label}</a>
+						<a aria-label={aria} {href}>{label}</a>
 					</li>
 				{/each}
 			</ul>
