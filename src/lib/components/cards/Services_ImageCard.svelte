@@ -16,7 +16,9 @@
 	</div>
 
 	<li class="flex h-fit w-2/3 flex-col justify-start lg:w-full">
-		<h2 class="my-4 px-6 text-xl lg:px-8 lg:text-3xl">
+		<h2
+			class="my-4 h-auto px-6 text-xl font-bold lg:h-24 lg:px-8 lg:text-2xl 2xl:h-auto 2xl:min-h-16"
+		>
 			{title}
 		</h2>
 		<p class="mb-8 px-6 text-sm lg:px-8 lg:text-base">
