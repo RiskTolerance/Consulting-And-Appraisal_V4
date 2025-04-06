@@ -11,7 +11,15 @@
 		class="bg-brand-teal-light dark:bg-brand-teal-dark flex w-12 flex-col items-center gap-3 rounded-tl-md rounded-bl-md py-4"
 	>
 		<li>
-			<!-- TODO: replace with X -->
+			<a
+				aria-label="Linkedin Social Link"
+				class=" fill-brand-light hover:fill-brand-dark cursor-pointer"
+				href={config.socialLinks.linkedin}
+			>
+				<LinkedinIcon></LinkedinIcon>
+			</a>
+		</li>
+		<li>
 			<a
 				aria-label="X Social Link"
 				class="fill-brand-light hover:fill-brand-dark cursor-pointer"
@@ -27,15 +35,6 @@
 				href={config.socialLinks.facebook}
 			>
 				<FacebookIcon></FacebookIcon>
-			</a>
-		</li>
-		<li>
-			<a
-				aria-label="Linkedin Social Link"
-				class=" fill-brand-light hover:fill-brand-dark cursor-pointer"
-				href={config.socialLinks.linkedin}
-			>
-				<LinkedinIcon></LinkedinIcon>
 			</a>
 		</li>
 	</ul>

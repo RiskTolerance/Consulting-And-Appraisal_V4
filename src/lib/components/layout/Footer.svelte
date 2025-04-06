@@ -1,13 +1,14 @@
 <script lang="ts">
 	import FacebookIcon from '$lib/components/icons/FacebookIcon.svelte';
 	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
-	import TwitterIcon from '$lib/components/icons/XIcon.svelte';
+	import XIcon from '$lib/components/icons/XIcon.svelte';
+	import { config } from '$lib/appConfig.svelte';
 	import { ArrowRight, Building, MailCheck, Phone } from '@lucide/svelte';
 </script>
 
 <footer class="bg-brand-teal-med text-brand-light dark:bg-brand-teal-dark w-full py-12 font-bold">
 	<div
-		class="container mx-auto grid grid-cols-2 justify-items-center gap-4 px-8 align-top md:grid-cols-3"
+		class="container mx-auto grid grid-cols-1 justify-items-center gap-8 px-8 align-top sm:grid-cols-2 md:grid-cols-3"
 	>
 		<div id="footer-contact" class="flex flex-col gap-4">
 			<div class="contact-item flex gap-2">
@@ -48,9 +49,27 @@
 			<a class="hover: underline" href="/services">and much more...</a>
 		</div>
 		<div class="flex items-center gap-6 md:hidden" id="footer-socials">
-			<LinkedinIcon></LinkedinIcon>
-			<TwitterIcon></TwitterIcon>
-			<FacebookIcon></FacebookIcon>
+			<a
+				aria-label="Linkedin Social Link"
+				class=" fill-brand-light hover:fill-brand-teal-light cursor-pointer"
+				href={config.socialLinks.linkedin}
+			>
+				<LinkedinIcon></LinkedinIcon>
+			</a>
+			<a
+				aria-label="X Social Link"
+				class="fill-brand-light hover:fill-brand-teal-light cursor-pointer"
+				href={config.socialLinks.x}
+			>
+				<XIcon></XIcon>
+			</a>
+			<a
+				aria-label="Facebook Social Link"
+				class=" fill-brand-light hover:fill-brand-teal-light cursor-pointer"
+				href={config.socialLinks.facebook}
+			>
+				<FacebookIcon></FacebookIcon>
+			</a>
 		</div>
 	</div>
 </footer>

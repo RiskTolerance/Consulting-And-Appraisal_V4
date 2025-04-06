@@ -36,7 +36,7 @@
 				? 'order-first md:order-last md:pl-16 lg:pl-20'
 				: 'order-first md:pr-16 lg:pr-20'} flex w-full flex-col justify-center gap-8 pt-3 pb-8 sm:pt-0 md:pb-0"
 		>
-			<h1 class="text-4xl">{title}</h1>
+			<h2 class="text-3xl font-semibold">{title}</h2>
 			<p class="text-sm sm:text-base lg:text-lg">
 				{body}
 			</p>
