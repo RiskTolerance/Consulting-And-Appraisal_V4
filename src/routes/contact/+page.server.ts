@@ -1,4 +1,6 @@
 import { readWriteClient } from '$lib/server/sanity/sanityClient';
+import { Resend } from 'resend';
+import { RESEND } from '$env/static/private';
 import type { Actions } from './$types';
 import slugify from 'slugify';
 
@@ -38,7 +40,31 @@ export const actions = {
 
 		try {
 			const result = await readWriteClient.mutate(mutations);
+			const resend = new Resend(RESEND);
+			const emailHtml = `
+					<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+						<h2 style="color: #2c3e50;">📬 New Form Response</h2>
+						<hr style="border: 1px solid #eaeaea;">
+						<p><strong>Name:</strong> ${name}</p>
+						<p><strong>Email:</strong> <a href="mailto:${email}" style="color: #3498db;">${email}</a></p>
+						<p><strong>Message:</strong><br>${message}</p>
+						<p><strong>Subscribed to Newsletter:</strong> ${subscriber ? '✅ Yes' : '❌ No'}</p>
+						<hr style="border: 1px solid #eaeaea;">
+						<footer style="font-size: 0.9em; color: #777;">
+							<p>This message was sent from your website form.</p>
+						</footer>
+					</div>
+				`;
+
+			resend.emails.send({
+				from: 'cas@resend.dev',
+				to: ['isaac.druin@gmail.com', 'wade.druin@consultingappraisal.com'],
+				subject: 'New Form Response',
+				html: emailHtml
+			});
+
 			console.log('Mutations successful:', result);
+			console.log('Email successful:', resend);
 		} catch (err) {
 			console.error('Mutation failed:', err.message);
 		}

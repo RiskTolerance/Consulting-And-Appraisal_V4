@@ -13,15 +13,19 @@
 		<div id="footer-contact" class="flex flex-col gap-4">
 			<div class="contact-item flex gap-2">
 				<Phone></Phone>
-				<span>+1 (123) 456-7890</span>
+				<span>+1 (605) 202-0440</span>
 			</div>
 			<div class="contact-item flex gap-2">
 				<MailCheck></MailCheck>
-				<a href="mailto:info@example.com">info@example.com</a>
 			</div>
 			<div class="contact-item flex gap-2">
 				<Building></Building>
-				<p>123 Main Street, Suite 100<br />Cityville, ST 12345</p>
+				<address>
+					<strong>Consulting &amp; Appraisal Services</strong><br />
+					Suite 200<br />
+					2500 W 49th St<br />
+					Sioux Falls, SD
+				</address>
 			</div>
 		</div>
 		<div id="footer-mailing-list">
