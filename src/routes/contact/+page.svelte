@@ -67,9 +67,6 @@
 					{#if form?.errors?.email}
 						<p class="mt-1 text-sm text-red-600">{form.errors.email[0]}</p>
 					{/if}
-					<!-- <span class="text-brand-orange w-fit text-sm font-bold {form?.errors.email ? '' : 'hidden'}"
-					>{form?.errors.email}</span
-				> -->
 				</div>
 			</div>
 

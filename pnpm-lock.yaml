@@ -48,6 +48,9 @@ devDependencies:
   '@eslint/js':
     specifier: ^9.24.0
     version: 9.24.0
+  '@portabletext/svelte':
+    specifier: ^3.0.0
+    version: 3.0.0(svelte@5.25.7)
   '@sveltejs/adapter-auto':
     specifier: ^4.0.0
     version: 4.0.0(@sveltejs/kit@2.20.4)
@@ -1360,6 +1363,27 @@ packages:
 
   /@polka/url@1.0.0-next.28:
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+    dev: true
+
+  /@portabletext/svelte@3.0.0(svelte@5.25.7):
+    resolution: {integrity: sha512-1PTbasjgyYdA/vpt4BCs3Nc0Fr8pqJQRuI6llhpNe+JgZ1EoSstzzjkSSGn9TtPW7yPls5i/7QksqhYTjUDocw==}
+    peerDependencies:
+      svelte: ^5.0.0
+    dependencies:
+      '@portabletext/toolkit': 2.0.17
+      svelte: 5.25.7
+    dev: true
+
+  /@portabletext/toolkit@2.0.17:
+    resolution: {integrity: sha512-5wj+oUaCmHm9Ay1cytPmT1Yc0SrR1twwUIc0qNQ3MtaXaNMPw99Gjt1NcA34yfyKmEf/TAB2NiiT72jFxdddIQ==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@portabletext/types': 2.0.13
+    dev: true
+
+  /@portabletext/types@2.0.13:
+    resolution: {integrity: sha512-5xk5MSyQU9CrDho3Rsguj38jhijhD36Mk8S6mZo3huv6PM+t4M/5kJN2KFIxgvt4ONpvOEs1pVIZAV0cL0Vi+Q==}
+    engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
     dev: true
 
   /@react-email/render@1.0.5(react-dom@19.1.0)(react@19.1.0):
