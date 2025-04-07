@@ -4,6 +4,7 @@
 	import XIcon from '$lib/components/icons/XIcon.svelte';
 	import { config } from '$lib/appConfig.svelte';
 	import { ArrowRight, Building, MailCheck, Phone } from '@lucide/svelte';
+	import { enhance } from '$app/forms';
 </script>
 
 <footer class="bg-brand-teal-med text-brand-light dark:bg-brand-teal-dark w-full py-12 font-bold">
@@ -33,10 +34,16 @@
 		</div>
 		<div id="footer-mailing-list">
 			<h2 class="mb-6 text-xl">Subscribe to our newsletter.<br /> Get our latest insights.</h2>
-			<form class="flex flex-col items-end" action="POST">
+			<form
+				class="flex flex-col items-end"
+				method="POST"
+				action="/actions?/newsletterSubscribe"
+				use:enhance
+			>
 				<input
 					class="text-brand-dark mb-2 w-full rounded-sm bg-teal-50 text-sm font-light"
 					type="email"
+					name="email"
 					placeholder="john.doe@email.com"
 					autocomplete="email"
 				/>

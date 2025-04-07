@@ -3,13 +3,14 @@ import { readClient } from '$lib/server/sanity/sanityClient';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from '../$types';
 import type { SanityImageAssetDocument } from '@sanity/client';
+import type { InputValue } from '@portabletext/svelte';
 
 export type SinglePost = {
 	post: {
 		title: string;
 		img: SanityImageAssetDocument;
 		imgAlt: string;
-		body: string;
+		body: InputValue;
 	}[];
 };
 
