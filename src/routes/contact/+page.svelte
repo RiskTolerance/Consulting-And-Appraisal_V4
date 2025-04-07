@@ -43,7 +43,7 @@
 						autocomplete="given-name"
 						class="{form?.errors?.name
 							? 'border-red-600'
-							: 'border-brand-teal-med'} w-full rounded-sm border-2 px-5 py-3"
+							: 'border-brand-teal-med'} text-brand-dark w-full rounded-sm border-2 px-5 py-3"
 						type="text"
 						value={form?.errors?.data ? form.errors.data.name : ''}
 					/>
@@ -57,7 +57,7 @@
 					<input
 						class="{form?.errors?.email
 							? 'border-red-600'
-							: 'border-brand-teal-med'} w-full rounded-sm border-2 px-5 py-3"
+							: 'border-brand-teal-med'} text-brand-dark w-full rounded-sm border-2 px-5 py-3"
 						type="text"
 						name="email"
 						placeholder="john.doe@email.com"
@@ -75,7 +75,7 @@
 				<textarea
 					class="{form?.errors?.message
 						? 'border-red-600'
-						: 'border-brand-teal-med'} w-full rounded-sm border-2 px-5 py-3"
+						: 'border-brand-teal-med'} text-brand-dark w-full rounded-sm border-2 px-5 py-3"
 					name="message"
 					value={form?.errors?.data && typeof form.errors.data.message === 'string'
 						? form.errors.data.message
