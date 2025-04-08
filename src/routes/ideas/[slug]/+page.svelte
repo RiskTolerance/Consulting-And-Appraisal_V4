@@ -9,8 +9,10 @@
 </script>
 
 <SectionHeader title={postData.post.title} body=""></SectionHeader>
-<div class="prose dark:prose-invert m-8 mx-auto mb-16">
-	{#if postData.post.body}
-		<PortableText value={postData.post.body}></PortableText>
-	{/if}
+<div class="w-full p-8 pb-16">
+	<div class="prose dark:prose-invert mx-auto">
+		{#if postData.post.body}
+			<PortableText value={postData.post.body}></PortableText>
+		{/if}
+	</div>
 </div>
