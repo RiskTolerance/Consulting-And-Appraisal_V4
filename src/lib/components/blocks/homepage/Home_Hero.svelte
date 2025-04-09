@@ -8,6 +8,11 @@
 <div class="relative w-full px-8">
 	<div class="absolute inset-0 -z-10">
 		{#if state.darkMode}
+			<!-- <img
+				class="hero-image h-full w-full object-cover object-center"
+				src="https://www.consultingappraisal.com/cdn-cgi/image/width=1280/images/building-dark.png"
+				alt="building"
+			/> -->
 			<enhanced:img
 				class="hero-image h-full w-full object-cover object-center"
 				fetchpriority="high"
