@@ -53,9 +53,10 @@
 {#snippet austin()}
 	<h3>Austin Druin</h3>
 	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid labore corporis veritatis nulla
-		corrupti, molestiae cupiditate asperiores iure quia ratione commodi odit molestias autem facilis
-		earum quos facere consequatur maxime!
+		Austin is currently completing his entry-level coursework to begin his career in real estate
+		appraisal. He holds a degree in Business Administration from the University of South Dakota.
+		Prior to joining the firm, he served six years in the South Dakota Air National Guard and worked
+		at Polaris, where he managed international shipping operations.
 	</p>
 {/snippet}
 
