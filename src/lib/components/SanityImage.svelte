@@ -2,13 +2,24 @@
 	import type { SanityImageAssetDocument } from '@sanity/client';
 	let {
 		img,
+		width,
 		imgAlt,
 		loaded = false
 	}: {
 		img: SanityImageAssetDocument;
+		width?: number;
 		imgAlt?: string;
 		loaded: boolean;
 	} = $props();
+	console.log(img.metadata.dimensions.aspectRatio);
+	console.log(img.url);
+	const imgUrl = (() => {
+		if (width) {
+			return `${img.url}?w=${width}`;
+		} else {
+			return img.url;
+		}
+	})();
 </script>
 
 {#if img}
@@ -23,7 +34,7 @@
 			loading="lazy"
 			style="opacity: {loaded ? 1 : 0}; "
 			class="absolute inset-0 h-full w-full object-cover transition-opacity duration-200"
-			src={img.url}
+			src={imgUrl}
 			alt={imgAlt ?? 'a generic image'}
 			onload={() => (loaded = true)}
 		/>

@@ -31,31 +31,33 @@
 	body="Quality appraisals for your properties. We're focused on providing you the best appraisal services so you can make well informed business decisions"
 ></SectionHeader>
 
-<div class="sectionMarginX z-[1000] -mt-16">
-	<div class="z-50 mb-10 grid w-full gap-x-8 gap-y-4 lg:grid-cols-3">
-		{#each featuredServices as service}
-			<Services_ImageCard
-				title={service.title}
-				img={service.img}
-				imgAlt={service.imgAlt}
-				serviceDescription={service.serviceDescription}
-			/>
-		{:else}
-			<p>loading</p>
-		{/each}
-	</div>
+<div class="px-8">
+	<div class="z-[1000] container mx-auto -mt-16">
+		<div class="z-50 mb-10 grid w-full gap-x-8 gap-y-4 lg:grid-cols-3">
+			{#each featuredServices as service}
+				<Services_ImageCard
+					title={service.title}
+					img={service.img}
+					imgAlt={service.imgAlt}
+					serviceDescription={service.serviceDescription}
+				/>
+			{:else}
+				<p>loading</p>
+			{/each}
+		</div>
 
-	<BlockHeader title="Additional Services"></BlockHeader>
+		<BlockHeader title="Additional Services"></BlockHeader>
 
-	<div class="mb-10 grid w-full gap-x-12 gap-y-6 md:grid-cols-1 lg:grid-cols-2">
-		{#each restServices as service}
-			<Services_Card
-				title={service.title}
-				img={service.img}
-				serviceDescription={service.serviceDescription}
-			/>
-		{:else}
-			<p>loading</p>
-		{/each}
+		<div class="mb-10 grid w-full gap-x-12 gap-y-6 md:grid-cols-1 lg:grid-cols-2">
+			{#each restServices as service}
+				<Services_Card
+					title={service.title}
+					img={service.img}
+					serviceDescription={service.serviceDescription}
+				/>
+			{:else}
+				<p>loading</p>
+			{/each}
+		</div>
 	</div>
 </div>

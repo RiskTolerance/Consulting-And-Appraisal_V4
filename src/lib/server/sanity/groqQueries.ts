@@ -1,12 +1,28 @@
+import { type SanityImageAssetDocument } from '@sanity/client';
+
+export type GetPostsQuery = {
+	posts: {
+		date: string;
+		title: string;
+		slug: string;
+		authorName: string;
+		authorImg: SanityImageAssetDocument;
+		img: SanityImageAssetDocument;
+		imgAlt: string;
+		featured: boolean;
+		excerpt: string;
+	}[];
+};
+
 export const getPostsQuery = `*[_type == 'post']{
     "date":publishedOn,
     title,
     "slug":slug.current,
     "img":mainImage.asset->,
-    "imgAlt":image.alt,
     "featured": featured,
-    "body":body[0].children[0].text,
-    "excerpt":excerpt[0].children[0].text
+    "excerpt":excerpt,
+    "authorName":author->name,
+    "authorImg":author->image.asset->,
     }`;
 
 export const getServicesQuery = `*[_type == 'service']{
@@ -33,9 +49,8 @@ export const getSinglePost = (slug: string) => {
 	return `
     *[_type == 'post' && slug.current == '${slug}'] {
       title,
-      "author":author->,
-      "authorName":author->.name,
-      "authorImg":authro->.img,
+      "authorName":author->name,
+      "authorImg":author->image,
       categories,
       "img":mainImage.asset->,
       "imgAlt":mainImage.alt,

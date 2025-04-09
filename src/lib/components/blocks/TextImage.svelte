@@ -14,14 +14,7 @@
 </script>
 
 <div class="w-full px-8">
-	<div class="container mx-auto grid grid-cols-1 md:grid-cols-2">
-		<!-- Text -->
-		<div class="my-12 flex w-full items-center justify-center">
-			<div class="prose dark:prose-invert">
-				{@render text()}
-			</div>
-		</div>
-		<!-- Image -->
+	<div class="container mx-auto md:grid md:grid-cols-2">
 		<div class="min-h-[300px] w-full p-8">
 			<enhanced:img
 				alt="building"
@@ -29,5 +22,12 @@
 				src={image}
 			></enhanced:img>
 		</div>
+		<!-- Text -->
+		<div class="my-12 flex w-full items-center justify-center">
+			<div class="prose dark:prose-invert">
+				{@render text()}
+			</div>
+		</div>
+		<!-- Image -->
 	</div>
 </div>

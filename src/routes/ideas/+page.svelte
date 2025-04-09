@@ -2,17 +2,18 @@
 	// meta
 	import Meta from '$lib/components/layout/Meta.svelte';
 	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
-	import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
-	import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
+	// import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
+	// import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
 	//
 	import type { PageServerData } from '../$types';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
-	import type { Posts } from './proxy+page.server';
+	import type { GetPostsQuery } from '$lib/server/sanity/groqQueries';
 	import IdeasPrimaryImageCard from '$lib/components/cards/Ideas_PrimaryImageCard.svelte';
 	import IdeasSecondaryImageCard from '$lib/components/cards/Ideas_SecondaryImageCard.svelte';
 
-	let { data }: { data: Posts } = $props();
+	let { data }: { data: GetPostsQuery } = $props();
 	let postData = $state({ posts: data?.posts });
+	console.log(postData.posts[1]);
 	const featuredPosts = postData.posts.filter((post) => post.featured);
 	const restPosts = postData.posts.filter((post) => !post.featured);
 	const primaryPost = featuredPosts[0];
@@ -33,54 +34,50 @@
 	body="Helpful insights and updates from the field. We share what we’ve learned to help you stay informed and make sound decisions—without the fluff."
 ></SectionHeader>
 
-<div class="sectionMarginX z-[1000] -mt-16">
-	<div class="mb-10 grid grid-cols-1 gap-y-5 lg:grid-cols-3 lg:gap-x-5">
-		<div class="flex h-96 md:h-80 lg:col-span-2 lg:h-full">
-			<IdeasPrimaryImageCard
-				title={primaryPost.title}
-				author={primaryPost.author}
-				date={primaryPost.date}
-				excerpt={primaryPost.excerpt}
-				img={primaryPost.img}
-				imgAlt={primaryPost.imgAlt}
-				slug={primaryPost.slug}
-			></IdeasPrimaryImageCard>
-		</div>
-		<div class="flex flex-col justify-between gap-y-5">
-			{#if secondaryPosts}
-				{#each secondaryPosts as post}
-					<IdeasSecondaryImageCard
-						title={post.title}
-						author={post.author}
-						date={post.date}
-						img={post.img}
-						imgAlt={post.imgAlt}
-						slug={post.slug}
-					/>
-				{/each}
-			{:else}
-				<div class="bg-brand-light h-full w-full"></div>
-			{/if}
+<div class="mx-auto px-8">
+	<div class="z-[1000] container mx-auto -mt-16">
+		<div class="mb-10 grid grid-cols-1 gap-y-5 lg:grid-cols-3 lg:gap-x-5">
+			<div class="flex h-96 md:h-80 lg:col-span-2 lg:h-full">
+				<IdeasPrimaryImageCard
+					title={primaryPost.title}
+					author={primaryPost.authorName}
+					authorImg={primaryPost.authorImg}
+					date={primaryPost.date}
+					excerpt={primaryPost.excerpt}
+					img={primaryPost.img}
+					imgAlt={primaryPost.imgAlt}
+					slug={primaryPost.slug}
+				></IdeasPrimaryImageCard>
+			</div>
+			<div class="flex flex-col justify-between gap-y-5">
+				{#if secondaryPosts}
+					{#each secondaryPosts as post}
+						<IdeasSecondaryImageCard
+							title={post.title}
+							author={post.authorName}
+							authorImg={post.authorImg}
+							date={post.date}
+							img={post.img}
+							imgAlt={post.imgAlt}
+							slug={post.slug}
+						/>
+					{/each}
+				{:else}
+					<div class="bg-brand-light h-full w-full"></div>
+				{/if}
+			</div>
 		</div>
 	</div>
 
-	<div class="flex flex-col md:flex-row">
+	<div class="container mx-auto mb-16 flex flex-col md:flex-row">
 		<div class="mb-10 flex justify-center md:w-1/4 md:justify-end">
 			<h1 class="text-3xl font-bold md:border-r-4 md:pr-12">Older Posts</h1>
 		</div>
-		<div class="flex w-full flex-col md:w-3/4 md:pl-12">
-			<div
-				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
-			></div>
-			<div
-				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
-			></div>
-			<div
-				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
-			></div>
-			<div
-				class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 mb-10 h-20 w-full rounded-md"
-			></div>
+		<div class="flex w-full flex-col gap-4 md:w-3/4 md:pl-12">
+			<div class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 h-20 w-full rounded-md"></div>
+			<div class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 h-20 w-full rounded-md"></div>
+			<div class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 h-20 w-full rounded-md"></div>
+			<div class="bg-brand-teal-light/10 dark:bg-brand-teal-med/10 h-20 w-full rounded-md"></div>
 		</div>
 	</div>
 </div>

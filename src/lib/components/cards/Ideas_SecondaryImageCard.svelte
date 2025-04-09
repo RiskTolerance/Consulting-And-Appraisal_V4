@@ -7,6 +7,7 @@
 	let {
 		title,
 		author,
+		authorImg,
 		date,
 		img,
 		imgAlt,
@@ -14,6 +15,7 @@
 	}: {
 		title: string;
 		author: string;
+		authorImg: SanityImageAssetDocument;
 		date: string;
 		img: SanityImageAssetDocument;
 		imgAlt: string;
@@ -38,7 +40,7 @@
 >
 	<div class="bg-brand-light absolute h-full w-full">
 		{#if img}
-			<SanityImage {img} {imgAlt} loaded={false} />
+			<SanityImage {img} width={500} {imgAlt} loaded={false} />
 		{/if}
 	</div>
 	<div
@@ -47,9 +49,12 @@
 		<h2 class="my-4 px-6 text-left text-xl font-bold lg:text-2xl">
 			{title}
 		</h2>
-		<div class="mb-4 flex space-x-8 px-6 text-sm sm:text-base">
-			<div class="flex space-x-2">
-				<User></User>
+		<div class="mb-4 flex items-center space-x-8 px-6 text-sm sm:text-base">
+			<div class="flex items-center space-x-2">
+				<div class="aspect-square h-10 overflow-clip rounded-full">
+					<SanityImage img={authorImg} width={100} imgAlt="Employee Image" loaded={false}
+					></SanityImage>
+				</div>
 				<p>{author}</p>
 			</div>
 			<div class="flex space-x-2">

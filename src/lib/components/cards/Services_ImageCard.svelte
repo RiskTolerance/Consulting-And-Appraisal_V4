@@ -14,7 +14,7 @@
 	class="bg-brand-light dark:bg-brand-teal-dark flex overflow-clip rounded-sm shadow-lg lg:flex-col"
 >
 	<div class="flex w-1/3 lg:h-52 lg:w-full">
-		<SanityImage {img} {imgAlt} loaded={false} />
+		<SanityImage {img} width={500} {imgAlt} loaded={false} />
 	</div>
 
 	<div class="flex h-fit w-2/3 flex-col justify-start lg:w-full">

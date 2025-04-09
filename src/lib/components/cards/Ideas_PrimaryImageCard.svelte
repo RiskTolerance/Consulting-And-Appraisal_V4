@@ -7,6 +7,7 @@
 	let {
 		title,
 		author,
+		authorImg,
 		date,
 		excerpt,
 		img,
@@ -15,6 +16,7 @@
 	}: {
 		title: string;
 		author: string;
+		authorImg: SanityImageAssetDocument;
 		date: string;
 		excerpt: string;
 		img: SanityImageAssetDocument;
@@ -40,7 +42,7 @@
 >
 	<div class="absolute inset-0">
 		{#if img}
-			<SanityImage {img} {imgAlt} loaded={false} />
+			<SanityImage {img} width={1050} {imgAlt} loaded={false} />
 		{/if}
 	</div>
 	<div class="absolute inset-0 flex items-end">
@@ -48,10 +50,12 @@
 			<h2 class="my-4 px-6 text-left text-xl font-bold sm:mr-[20%] lg:px-8 lg:text-3xl">
 				{title}
 			</h2>
-			<div class="mb-4 flex space-x-8 px-6 text-sm sm:text-base lg:px-8">
-				<div class="flex space-x-2">
-					<!-- <i class="fa-solid fa-user pt-1"></i> -->
-					<User></User>
+			<div class="mb-4 flex items-center space-x-8 px-6 text-sm sm:text-base lg:px-8">
+				<div class="flex items-center space-x-2">
+					<div class="aspect-square h-10 overflow-clip rounded-full">
+						<SanityImage img={authorImg} width={100} imgAlt="Employee Image" loaded={false}
+						></SanityImage>
+					</div>
 					<p>{author}</p>
 				</div>
 				<div class="flex space-x-2">
@@ -67,12 +71,8 @@
 			</div>
 
 			<p class="mb-4 overflow-hidden px-8 text-left text-sm text-ellipsis sm:text-base">
-				{excerpt} Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo magnam in alias recusandae
-				voluptatum! Similique nisi ab quae quisquam nobis placeat delectus.
+				{excerpt}
 			</p>
 		</div>
 	</div>
-	<!-- <div class="h-1/2 p-4 lg:m-6">
-		<p class="h-full overflow-hidden text-ellipsis">{excerpt}</p>
-	</div> -->
 </button>

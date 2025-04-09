@@ -24,7 +24,7 @@
 	} = $props();
 </script>
 
-<div class="w-full px-8 md:px-16">
+<div class="px-8 md:px-16">
 	<div
 		class="relative container mx-auto my-12 grid grid-cols-1 md:my-16 md:grid-cols-2 lg:mb-32 lg:gap-x-12"
 	>
