@@ -1,0 +1,23 @@
+
+/* TEAM */
+Developer: Adept Web Development, LLC
+Location: Sioux Falls, South Dakota
+Contact: isaac.druin@adeptwebdev.com
+
+/* CLIENT */
+Company: Consulting & Appraisal Services (CAS)
+Location: Sioux Falls, South Dakota
+Website: https://www.consultingappraisal.com
+Services: Real Estate Appraisals, Real Estate Consulting, Legal Issues & Expert Testimony
+
+/* TECHNOLOGIES */
+Frontend: SvelteKit, Tailwind CSS
+Backend/CMS: Sanity.io
+Hosting: Cloudflare Pages
+Analytics: Fathom Analytics
+
+/* THANKS */
+Special thanks to the CAS team for their friendliness and cooperation.
+
+/* LAST UPDATED */
+Last update: 2025-04-06
