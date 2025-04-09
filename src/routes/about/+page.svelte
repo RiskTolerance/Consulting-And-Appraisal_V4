@@ -54,9 +54,9 @@
 	<h3>Austin Druin</h3>
 	<p>
 		Austin is currently completing his entry-level coursework to begin his career in real estate
-		appraisal. He holds a degree in Business Administration from the University of South Dakota.
-		Prior to joining the firm, he served six years in the South Dakota Air National Guard and worked
-		at Polaris, where he managed international shipping operations.
+		appraisal. He holds a degree from the University of South Dakota. Prior to joining the firm, he
+		served six years in the South Dakota Air National Guard and worked at Polaris, where he managed
+		international shipping operations.
 	</p>
 {/snippet}
 
