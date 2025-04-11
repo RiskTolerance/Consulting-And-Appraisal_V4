@@ -97,7 +97,7 @@ export const actions = {
 				`;
 
 			const { data, error } = await resend.emails.send({
-				from: 'admin@consultingappraisal.com',
+				from: 'submissions@consultingappraisal.com',
 				to: ['isaac.druin@gmail.com', 'wade.druin@consultingappraisal.com'],
 				subject: 'New Form Response',
 				html: emailHtml

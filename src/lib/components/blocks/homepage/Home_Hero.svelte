@@ -1,6 +1,6 @@
 <script lang="ts">
 	import heroImage from '$lib/assets/images/building.jpg?enhanced';
-	import heroImageDark from '$lib/assets/images/building-dark.png?enhanced';
+	import heroImageDark from '$lib/assets/images/building-dark-2.png?enhanced';
 	import BtnSolid from '../../buttons/Btn_Solid.svelte';
 	import { state } from '$lib/appState.svelte';
 </script>
@@ -13,6 +13,13 @@
 				src="https://www.consultingappraisal.com/cdn-cgi/image/width=1280/images/building-dark.png"
 				alt="building"
 			/> -->
+
+			<!-- <img
+				class="hero-image h-full w-full object-cover object-center"
+				src="https://imagedelivery.net/LFYkgf13HxqD-r0JqcA7dg/475f2652-6511-4b1b-ba55-e14d4ee0a700/w=1600"
+				alt="building at night"
+			/> -->
+
 			<enhanced:img
 				class="hero-image h-full w-full object-cover object-center"
 				fetchpriority="high"
