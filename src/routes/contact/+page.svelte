@@ -2,18 +2,16 @@
 	// meta
 	import Meta from '$lib/components/layout/Meta.svelte';
 	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
-	import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
-	import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
+	// import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
+	// import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
 	//
+
+	import { Turnstile } from 'svelte-turnstile';
 	import { enhance } from '$app/forms';
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import BtnSolid from '$lib/components/buttons/Btn_Solid.svelte';
 	let { form } = $props();
 </script>
-
-<svelte:head>
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-</svelte:head>
 
 <Meta
 	title="CAS | Contact"
@@ -101,7 +99,7 @@
 				/>
 				<label class="text-xs md:text-sm" for="subscriber">Subscribe to our newsletter?</label>
 			</div>
-			<div class="cf-turnstile" data-sitekey="0x4AAAAAABeqSyvqAjUv-9kx"></div>
+			<Turnstile siteKey="0x4AAAAAABeqSyvqAjUv-9kx"></Turnstile>
 			{#if form?.success}
 				<h2 class="text-2xl text-green-500">
 					Thank you for reaching out, we will get back to you ASAP!

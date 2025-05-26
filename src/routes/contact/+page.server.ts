@@ -1,46 +1,54 @@
 import { readWriteClient } from '$lib/server/sanity/sanityClient';
 import { Resend } from 'resend';
 import { RESEND } from '$env/static/private';
+import { CLOUDFLARE_TURNSTILE_SECRET } from '$env/static/private';
 import type { Actions } from './$types';
 import slugify from 'slugify';
 import { z } from 'zod';
 import { fail } from '@sveltejs/kit';
 
-async function cfValidate(request: Request, data: FormData) {
-	const turnstileToken = data.get('cf-turnstile-response');
-		const ip = request.headers.get('CF-Connecting-IP');
 
-		const tsFormData = new FormData();
-		tsFormData.append('secret', process.env.TURNSTILE_SECRET_KEY || '');
-		tsFormData.append('response', turnstileToken as string);
-		tsFormData.append('remoteip', ip || '');
+interface TokenValidateResponse {
+	'error-codes': string[];
+	success: boolean;
+	action: string;
+	cdata: string;
+}
 
-		const url = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
-		const tsResult = await fetch(url, {
+async function validateToken(token: string, secret: string) {
+	const response = await fetch(
+		'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+		{
 			method: 'POST',
-			body: tsFormData
-		});
-
-		const outcome = await tsResult.json();
-
-		if (!outcome.success) {
-			console.error('Turnstile verification failed:', outcome);
-			return {success: false, error: 'Turnstile verification failed', outcome};
-		} else {
-			console.log('Turnstile verification successful:', outcome);
-			return { success: true, outcome };
-		}
+			headers: {
+				'content-type': 'application/json',
+			},
+			body: JSON.stringify({
+				response: token,
+				secret: secret,
+			}),
+		},
+	);
+	const data: TokenValidateResponse = await response.json();
+	return {
+		// Return the status
+		success: data.success,
+		// Return the first error if it exists
+		error: data['error-codes']?.length ? data['error-codes'][0] : null,
+	};
 }
  
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
 
-		// Validate Turnstile response, if it fails return silently
-		const turnstileResult = await cfValidate(request, data);
+		const token = data.get('cf-turnstile-response');
+		// Validate Turnstile response, if it fails return
 
+		const turnstileResult = await validateToken(token as string, CLOUDFLARE_TURNSTILE_SECRET);
+		
 		if (turnstileResult.success === false) {
-			return {success: false, error: turnstileResult.outcome};
+			return {success: false, error: turnstileResult.success};
 		}
 
 		const rawForm = {
