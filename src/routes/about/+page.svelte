@@ -63,23 +63,13 @@
 {#snippet cooper()}
 	<h3>Cooper Baloun</h3>
 	<p>
-		Cooper Baloun is a skilled valuation professional with experience appraising various property
-		types, including commercial, retail, office, industrial, multifamily, new construction, and
-		agricultural properties. He holds a Certified General Appraiser license in South Dakota.
-	</p>
-	<p>
-		Cooper earned a Bachelor of Business Administration (BBA) degree in Finance from the University
-		of South Dakota, where he participated in the Coyote Capital Management program, gaining
-		valuable experience in investment management.
-	</p>
-	<p>
-		His professional experience includes roles as a Financial Analyst at Sammons Financial Group,
-		where he specialized in financial analysis and reporting, and as a Summer Analyst at Goldman
-		Sachs, where he expanded his expertise in the financial sector.
-	</p>
-	<p>
-		Cooper’s diverse background in finance and property valuation highlights his dedication to
-		delivering professional and precise results in every project he undertakes.
+		Cooper is a business economics graduate from South Dakota State University with a strong focus
+		in real estate valuation and business development. With experience at firms like CBRE, Expansion
+		Capital Group, and now Consulting & Appraisal Services, he specializes in property appraisal,
+		market analysis, and client relationship management. Cooper is passionate about delivering
+		accurate insights, communicating effectively, and driving results in fast-paced environments.
+		Licensed in appraising and property management, he brings a versatile, goal-driven mindset to
+		every project he takes on..
 	</p>
 {/snippet}
 <Meta
