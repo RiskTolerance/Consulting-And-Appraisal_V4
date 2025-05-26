@@ -108,8 +108,10 @@ export const actions = {
 				console.log('Email errors', error);
 			}
 			return { success: true };
-		} catch (err) {
-			console.error('Something went wrong:', err.message);
+		} catch (err: unknown) {
+			console.error('Something went wrong:', err);
+		} finally {
+			console.log('can I put my email logic here?');
 		}
 	}
 } satisfies Actions;

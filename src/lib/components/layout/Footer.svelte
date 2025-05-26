@@ -54,13 +54,13 @@
 			</form>
 		</div>
 		<div id="footer-specilization" class="flex flex-col gap-4">
-			<h2 class="text-xl">Specialization</h2>
+			<h2 class="text-xl">Specializations</h2>
 			<ul class="ml-8 list-disc">
-				<li>Capitalization rate studies</li>
-				<li>Estate Planning & Probate</li>
-				<li>Purchase and listing decisions</li>
+				<li>Legal Issues & Expert Court Testimony</li>
+				<li>RealEstate Consulting</li>
+				<li>Probate</li>
 			</ul>
-			<a class="hover: underline" href="/services">and much more...</a>
+			<a class="underline" href="/services">and much more...</a>
 		</div>
 		<div class="flex items-center gap-6 md:hidden">
 			<a

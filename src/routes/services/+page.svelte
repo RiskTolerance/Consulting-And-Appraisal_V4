@@ -28,11 +28,11 @@
 />
 <SectionHeader
 	title="Services"
-	body="Quality appraisals for your properties. We're focused on providing you the best appraisal services so you can make well informed business decisions"
+	body="We are here to help you make confident decisions with clear, reliable property appraisals and consulting. Whether it is agricultural or commercial property appraisals, assisting with pretrial consulting or something in between, you can count on us to give it the time and attention it deserves."
 ></SectionHeader>
 
 <div class="px-8">
-	<div class="z-[1000] container mx-auto -mt-16">
+	<div class="container z-[1000] mx-auto -mt-16">
 		<div class="z-50 mb-10 grid w-full gap-x-8 gap-y-4 lg:grid-cols-3">
 			{#each featuredServices as service}
 				<Services_ImageCard

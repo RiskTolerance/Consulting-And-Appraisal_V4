@@ -21,7 +21,7 @@
 			studies, our firm is qualified for any job. Since our start, we have continued to grow in
 			expertise and location. With a presence in Sioux Falls, South Dakota and Sioux City, Iowa, and
 			licensed in Iowa, Nebraska, and South Dakota, we are well positioned to serve our customers.<br
-			/><br /> Our team has well over 25 years of experience in the field of consulting and appraisal.
+			/><br /> Our team has well over 10 years of experience in the field of consulting and appraisal.
 			Let us put our experience to work for you.
 		</p>
 	</div>

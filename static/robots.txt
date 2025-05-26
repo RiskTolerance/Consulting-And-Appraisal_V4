@@ -3,4 +3,3 @@ User-agent: *
 Disallow:
 
 Sitemap: https://www.consultingappraisal.com/sitemap.xml
-Humans: https://www.consultingappraisal.com/humans.txt
