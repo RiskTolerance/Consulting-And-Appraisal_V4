@@ -5,24 +5,24 @@
 	}: { title: string; body?: string } = $props();
 </script>
 
-<!-- background gradiend -->
+<!-- background gradient -->
 <div
-	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative -z-10 min-h-[450px] w-full bg-gradient-to-bl"
+	class="from-brand-light to-brand-teal-light dark:from-brand-teal-light dark:to-brand-teal-dark relative -z-10 min-h-[550px] w-full bg-gradient-to-bl"
 >
 	<!-- background pattern -->
 	<div class="titlecard absolute inset-0">
 		<!-- content container (set height for title text) -->
-		<div class="absolute top-1/2 h-14 w-full -translate-y-1/2 px-8 md:h-18">
+		<div class="md:h-18 absolute top-1/2 h-14 w-full -translate-y-1/2 px-8">
 			<div
-				class="bg-brand-light dark:bg-brand-dark absolute top-0 left-0 h-full w-3/4 rounded-tr-sm rounded-br-sm"
+				class="bg-brand-light dark:bg-brand-dark absolute left-0 top-0 h-full w-3/4 rounded-br-sm rounded-tr-sm"
 			></div>
-			<div class="relative container mx-auto flex h-full flex-col items-center justify-center">
+			<div class="container relative mx-auto flex h-full flex-col items-center justify-center">
 				<h1 class="text-3xl font-bold md:text-4xl">{title}</h1>
 				<p
-					class="absolute bottom-0 left-1/2 w-full max-w-[600px] -translate-x-1/2 translate-y-[calc(100%+20px)] text-sm md:text-xl {body.length >
+					class="absolute bottom-0 left-1/2 w-full max-w-[600px] -translate-x-1/2 translate-y-[calc(100%+20px)] text-sm {body.length >
 					100
-						? 'text-start'
-						: 'text-center'}"
+						? 'text-start md:text-lg'
+						: 'text-center md:text-xl'}"
 				>
 					{body}
 				</p>

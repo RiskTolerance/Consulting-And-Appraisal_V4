@@ -3,7 +3,7 @@
 	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
 	import XIcon from '$lib/components/icons/XIcon.svelte';
 	import { config } from '$lib/appConfig.svelte';
-	import { ArrowRight, Building, MailCheck, Phone } from '@lucide/svelte';
+	import { ArrowRight, Building, MailCheck, Phone, AtSign } from '@lucide/svelte';
 	import { enhance } from '$app/forms';
 </script>
 
@@ -17,7 +17,7 @@
 				<span>+1 (605) 202-0440</span>
 			</div>
 			<div class="contact-item flex gap-2">
-				<MailCheck></MailCheck>
+				<AtSign></AtSign>
 				<a target="_blank" href="mailto:hello@consultingappraisal.com"
 					>hello@consultingappraisal.com</a
 				>
@@ -25,9 +25,20 @@
 			<div class="contact-item flex gap-2">
 				<Building></Building>
 				<address>
+					<span class="sr-only">Physical Address:</span>
 					<strong>Consulting &amp; Appraisal Services</strong><br />
 					Suite 200<br />
 					2500 W 49th St<br />
+					Sioux Falls, SD
+				</address>
+			</div>
+			<div class="contact-item flex gap-2">
+				<MailCheck></MailCheck>
+				<address>
+					<span class="sr-only">Mailing Address:</span>
+					<strong>Consulting &amp; Appraisal Services</strong><br />
+					#104<br />
+					4800 South Louise Ave<br />
 					Sioux Falls, SD
 				</address>
 			</div>
@@ -67,6 +78,7 @@
 				aria-label="Linkedin Social Link"
 				class=" fill-brand-light hover:fill-brand-teal-light cursor-pointer"
 				href={config.socialLinks.linkedin}
+				target="_blank"
 			>
 				<LinkedinIcon></LinkedinIcon>
 			</a>
@@ -74,6 +86,7 @@
 				aria-label="X Social Link"
 				class="fill-brand-light hover:fill-brand-teal-light cursor-pointer"
 				href={config.socialLinks.x}
+				target="_blank"
 			>
 				<XIcon></XIcon>
 			</a>
@@ -81,6 +94,7 @@
 				aria-label="Facebook Social Link"
 				class=" fill-brand-light hover:fill-brand-teal-light cursor-pointer"
 				href={config.socialLinks.facebook}
+				target="_blank"
 			>
 				<FacebookIcon></FacebookIcon>
 			</a>
