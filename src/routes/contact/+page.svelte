@@ -11,6 +11,10 @@
 	let { form } = $props();
 </script>
 
+<svelte:head>
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</svelte:head>
+
 <Meta
 	title="CAS | Contact"
 	description="Reach out to Consulting & Appraisal Services in Sioux Falls, SD for reliable, friendly help with property appraisals and real estate consulting."
@@ -23,7 +27,7 @@
 <SectionHeader title="Contact Us" body="Get in touch with us!"></SectionHeader>
 
 <div class="w-full px-8">
-	<div class="z-[1000] container mx-auto -mt-16 mb-16">
+	<div class="container z-[1000] mx-auto -mt-16 mb-16">
 		<form
 			method="POST"
 			use:enhance
@@ -34,7 +38,7 @@
 				We would love to hear from you! Use the form below to send us a message. Alternitively, you
 				can send us a good ol' fashioned email, give us a call, or connect with us on social media.
 			</p>
-			<div class="flex w-full flex-wrap items-start gap-8 lg:space-y-0 lg:space-x-5">
+			<div class="flex w-full flex-wrap items-start gap-8 lg:space-x-5 lg:space-y-0">
 				<div class="w-fit">
 					<label for="email">Name:</label>
 					<input
@@ -97,6 +101,7 @@
 				/>
 				<label class="text-xs md:text-sm" for="subscriber">Subscribe to our newsletter?</label>
 			</div>
+			<div class="cf-turnstile" data-sitekey="0x4AAAAAABeqSyvqAjUv-9kx"></div>
 			{#if form?.success}
 				<h2 class="text-2xl text-green-500">
 					Thank you for reaching out, we will get back to you ASAP!
