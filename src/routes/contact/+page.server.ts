@@ -48,7 +48,7 @@ export const actions = {
 		const turnstileResult = await validateToken(token as string, CLOUDFLARE_TURNSTILE_SECRET);
 		
 		if (turnstileResult.success === false) {
-			return {success: false, error: turnstileResult.success};
+			return {success: false, error: turnstileResult.error};
 		}
 
 		const rawForm = {
