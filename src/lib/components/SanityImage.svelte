@@ -9,7 +9,7 @@
 		img: SanityImageAssetDocument;
 		width?: number;
 		imgAlt?: string;
-		loaded: boolean;
+		loaded?: boolean;
 	} = $props();
 	console.log(img.metadata.dimensions.aspectRatio);
 	console.log(img.url);

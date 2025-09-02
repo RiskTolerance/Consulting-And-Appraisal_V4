@@ -1,8 +1,5 @@
 <script lang="ts">
-	let {
-		title = 'title',
-		body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-	}: { title: string; body?: string } = $props();
+	let { title = 'title', body = '' }: { title: string; body?: string } = $props();
 </script>
 
 <!-- background gradient -->
@@ -12,11 +9,11 @@
 	<!-- background pattern -->
 	<div class="titlecard absolute inset-0">
 		<!-- content container (set height for title text) -->
-		<div class="md:h-18 absolute top-1/2 h-14 w-full -translate-y-1/2 px-8">
+		<div class="absolute top-1/2 h-14 w-full -translate-y-1/2 px-8 md:h-18">
 			<div
-				class="bg-brand-light dark:bg-brand-dark absolute left-0 top-0 h-full w-3/4 rounded-br-sm rounded-tr-sm"
+				class="bg-brand-light dark:bg-brand-dark absolute top-0 left-0 h-full w-3/4 rounded-tr-sm rounded-br-sm"
 			></div>
-			<div class="container relative mx-auto flex h-full flex-col items-center justify-center">
+			<div class="relative container mx-auto flex h-full flex-col items-center justify-center">
 				<h1 class="text-3xl font-bold md:text-4xl">{title}</h1>
 				<p
 					class="absolute bottom-0 left-1/2 w-full max-w-[600px] -translate-x-1/2 translate-y-[calc(100%+20px)] text-sm {body.length >

@@ -9,8 +9,12 @@
 		landscape: 'aspect-landscape',
 		portrait: 'aspect-[3/4] w-[400px]'
 	};
-	let { text, image, aspectRatio }: { text: Snippet; image: Picture; aspectRatio: Aspect } =
-		$props();
+	let {
+		text,
+		image,
+		aspectRatio,
+		reverse = false
+	}: { text: Snippet; image: Picture; aspectRatio: Aspect; reverse?: boolean } = $props();
 </script>
 
 <div class="w-full px-8">
@@ -23,7 +27,7 @@
 			></enhanced:img>
 		</div>
 		<!-- Text -->
-		<div class="my-12 flex w-full items-center justify-center">
+		<div class="my-12 flex w-full items-center justify-center {reverse ? 'order-first' : ''}">
 			<div class="prose dark:prose-invert">
 				{@render text()}
 			</div>

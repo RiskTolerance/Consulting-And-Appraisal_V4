@@ -58,3 +58,20 @@ export const getSinglePost = (slug: string) => {
     }
   `;
 };
+
+export type GetEmployeesQuery = {
+  employees: {
+    name: string;
+    title: string;
+    bio: string;
+    img: SanityImageAssetDocument;
+    imageAlt: string;
+  }[];
+};
+
+export const getEmployeesQuery = `*[_type == 'employee']{
+  name,
+  bio,
+  "img":image.asset->,
+  "imageAlt":image.alt,
+}`;

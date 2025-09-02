@@ -5,7 +5,7 @@
 	// import meta512 from '$lib/assets/images/meta/meta-square-512.webp';
 	// import meta500 from '$lib/assets/images/meta/meta-square-500.webp';
 	//
-	import type { PageServerData } from '../$types';
+
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import type { GetPostsQuery } from '$lib/server/sanity/groqQueries';
 	import IdeasPrimaryImageCard from '$lib/components/cards/Ideas_PrimaryImageCard.svelte';
@@ -13,7 +13,6 @@
 
 	let { data }: { data: GetPostsQuery } = $props();
 	let postData = $state({ posts: data?.posts });
-	console.log(postData.posts[1]);
 	const featuredPosts = postData.posts.filter((post) => post.featured);
 	const restPosts = postData.posts.filter((post) => !post.featured);
 	const primaryPost = featuredPosts[0];

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// meta
 	import Meta from '$lib/components/layout/Meta.svelte';
 	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
@@ -8,10 +8,12 @@
 	import SectionHeader from '$lib/components/blocks/SectionHeader.svelte';
 	import TextImage from '$lib/components/blocks/TextImage.svelte';
 	import MR from '$lib/assets/images/mtrushmore.jpg?enhanced';
-	import Wade from '$lib/assets/images/wade.jpg?enhanced';
-	import Cooper from '$lib/assets/images/cooper.jpg?enhanced';
-	import Austin from '$lib/assets/images/austin.jpg?enhanced';
+	import ServiceMap from '$lib/assets/images/Service_Area.png?enhanced';
 	import BlockHeader from '$lib/components/blocks/BlockHeader.svelte';
+	import Employee from '$lib/components/blocks/Employee.svelte';
+	import type { GetEmployeesQuery } from '$lib/server/sanity/groqQueries';
+	let { data }: { data: GetEmployeesQuery } = $props();
+	console.log(data.employees[0]);
 </script>
 
 {#snippet wherewecomefrom()}
@@ -27,51 +29,13 @@
 	</div>
 {/snippet}
 
-{#snippet wade()}
-	<h3>Wade D. Druin, J.D.</h3>
+{#snippet whoweserve()}
 	<p>
-		Wade holds a Certified General Appraisal license in Iowa, Nebraska, and South Dakota. He earned
-		a bachelor's degree in business administration and accounting, a law degree from the University
-		of South Dakota, and is a licensed attorney in South Dakota. He also completed post-doctoral
-		studies in Management at the University of Florida's Warrington College of Business.
-	</p>
-	<p>
-		With extensive experience in property appraisal, Wade has worked with commercial, retail,
-		office, industrial, multifamily, new construction, and agricultural properties. Before joining
-		Shaykett Appraisal, he was a valuation associate with CBRE. He is a member of the Appraisal
-		Institute and the American Society of Farm Managers and Rural Appraisers.
-	</p>
-	<p>
-		Wade’s career spans roles as a Tax Consultant with Deloitte Touche, practicing attorney, and 30
-		years as a commissioned officer in the U.S. Air Force and Air National Guard, retiring as a
-		lieutenant colonel. He also held leadership and academic positions at the South Dakota Small
-		Business Development Center, the Business Research Bureau at the University of South Dakota, and
-		the University of South Dakota Beacom School of Business.
+		C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South
+		Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota.
 	</p>
 {/snippet}
 
-{#snippet austin()}
-	<h3>Austin Druin</h3>
-	<p>
-		Austin is currently completing his entry-level coursework to begin his career in real estate
-		appraisal. He holds a degree from the University of South Dakota. Prior to joining the firm, he
-		served six years in the South Dakota Air National Guard and worked at Polaris, where he managed
-		international shipping operations.
-	</p>
-{/snippet}
-
-{#snippet cooper()}
-	<h3>Cooper Baloun</h3>
-	<p>
-		Cooper is a business economics graduate from South Dakota State University with a strong focus
-		in real estate valuation and business development. With experience at firms like CBRE, Expansion
-		Capital Group, and now Consulting & Appraisal Services, he specializes in property appraisal,
-		market analysis, and client relationship management. Cooper is passionate about delivering
-		accurate insights, communicating effectively, and driving results in fast-paced environments.
-		Licensed in appraising and property management, he brings a versatile, goal-driven mindset to
-		every project he takes on..
-	</p>
-{/snippet}
 <Meta
 	title="CAS | About"
 	description="Meet our experienced team at Consulting & Appraisal Services, providing trusted property valuation and guidance across the Midwest."
@@ -81,14 +45,17 @@
 	ogImage={metaog}
 	twitterImage={metaog}
 />
-<SectionHeader
-	title="About"
-	body="C.A.S is a full-service consulting and real estate appraisal firm serving Eastern South Dakota,Northeastern Nebraska, Western Iowa and Southwestern Minnesota."
-></SectionHeader>
+<SectionHeader title="About"></SectionHeader>
+<BlockHeader title="Who We Serve"></BlockHeader>
+<TextImage text={whoweserve} image={ServiceMap} aspectRatio={'landscape'} reverse={true}
+></TextImage>
 <BlockHeader title="Where We Come From"></BlockHeader>
-
 <TextImage text={wherewecomefrom} image={MR} aspectRatio={'landscape'}></TextImage>
 <BlockHeader title="Who We Are"></BlockHeader>
-<TextImage text={wade} image={Wade} aspectRatio={'portrait'}></TextImage>
-<TextImage text={cooper} image={Cooper} aspectRatio={'portrait'}></TextImage>
-<TextImage text={austin} image={Austin} aspectRatio={'portrait'}></TextImage>
+<div class="mb-12 px-8">
+	<div class="container mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+		{#each data.employees as employee}
+			<Employee {employee}></Employee>
+		{/each}
+	</div>
+</div>

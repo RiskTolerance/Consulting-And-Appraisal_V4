@@ -5,7 +5,7 @@
 	// images
 	import section1Img from '$lib/assets/images/suit.jpg?enhanced';
 	import section2Img from '$lib/assets/images/idea.jpg?enhanced';
-	import section3Img from '$lib/assets/images/phone.jpg?enhanced';
+	import section3Img from '$lib/assets/images/phone.png?enhanced';
 	// meta
 	import Meta from '$lib/components/layout/Meta.svelte';
 	import metaog from '$lib/assets/images/meta/meta-og-card.webp';
